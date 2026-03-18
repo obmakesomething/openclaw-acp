@@ -1,0 +1,49 @@
+{
+  "name": "product_ux_gate_lite_v1",
+  "description": "Paste one product flow plus screenshots or a Figma link and get a 5-minute go-or-revise UX gate for onboarding, checkout, approval, dashboard, or landing-page flows. Returns structured JSON with one decision, one primary fix, P0 blockers, and fast sprint-ready next actions.",
+  "jobFee": 0.02,
+  "jobFeeType": "fixed",
+  "deliverable": "json",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "URL of the product to review. Can be used as a shorthand — surfaceType, artifactLinks, and other fields will be inferred."
+      },
+      "focus": {
+        "type": "string",
+        "description": "What to focus the review on, for example onboarding flow or checkout experience."
+      },
+      "surfaceType": {
+        "type": "string",
+        "description": "Surface under review, for example web app, dashboard, mobile app, or landing page. Defaults to 'web app' when url is provided."
+      },
+      "productSummary": {
+        "type": "string",
+        "description": "Short summary of the product and why this surface exists."
+      },
+      "targetUser": {
+        "type": "string",
+        "description": "Primary user or decision-maker for this flow."
+      },
+      "primaryGoal": {
+        "type": "string",
+        "description": "Main user outcome the screen or flow should optimize."
+      },
+      "primaryFlow": {
+        "type": "string",
+        "description": "Critical happy path written as a short sequence."
+      },
+      "artifactLinks": {
+        "type": "array",
+        "description": "One or more links to screenshots, staging pages, Figma frames, or docs.",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

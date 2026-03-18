@@ -1,0 +1,71 @@
+{
+  "name": "product_ux_review_deep_v1",
+  "description": "Deep UX audit for onboarding, checkout, approval, dashboard, and landing-page flows. Built for PMs, founders, and design leads who need a PM-ready brief on IA, flow priority, and loading, empty, error, and success states. Returns structured JSON with flow map, priority issues, IA recommendation, state-policy guidance, and experiment plan.",
+  "jobFee": 0.08,
+  "jobFeeType": "fixed",
+  "deliverable": "json",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "URL of the product to review. Can be used as a shorthand — surfaceType, artifactLinks, and other fields will be inferred."
+      },
+      "focus": {
+        "type": "string",
+        "description": "What to focus the review on, for example onboarding flow or checkout experience."
+      },
+      "surfaceType": {
+        "type": "string",
+        "description": "Surface under review, for example web app, dashboard, mobile app, or landing page. Defaults to 'web app' when url is provided."
+      },
+      "productSummary": {
+        "type": "string",
+        "description": "Short summary of the product and the business context."
+      },
+      "targetUser": {
+        "type": "string",
+        "description": "Primary user or decision-maker for this UX surface."
+      },
+      "primaryGoal": {
+        "type": "string",
+        "description": "Main user outcome this review should optimize."
+      },
+      "primaryFlow": {
+        "type": "string",
+        "description": "Critical happy path written as a short sequence."
+      },
+      "artifactLinks": {
+        "type": "array",
+        "description": "Links to screenshots, staging pages, Figma frames, or product docs.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "currentIA": {
+        "type": "string",
+        "description": "Current information architecture, nav model, or content grouping. Defaults to 'not provided'."
+      },
+      "coreScreensOrStates": {
+        "type": "array",
+        "description": "Key screens or states that must be included in the review. Defaults to ['main screen'].",
+        "items": {
+          "type": "string"
+        }
+      },
+      "changeBudget": {
+        "type": "string",
+        "description": "Expected implementation budget such as low, medium, or high. Defaults to 'medium'."
+      },
+      "successMetrics": {
+        "type": "array",
+        "description": "Metrics that define success for this redesign or audit. Defaults to ['task completion rate'].",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

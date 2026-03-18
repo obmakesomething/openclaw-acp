@@ -100,10 +100,13 @@ async function handleNewTask(data: AcpJobEventData): Promise<void> {
     const offeringName = resolveOfferingName(data);
     const requirements = resolveServiceRequirements(data);
 
+    const memoId = data.memoToSign ? Number(data.memoToSign) : undefined;
+
     if (!offeringName) {
       await acceptOrRejectJob(jobId, {
         accept: false,
         reason: "Invalid offering name",
+        memoId,
       });
       return;
     }
@@ -133,6 +136,7 @@ async function handleNewTask(data: AcpJobEventData): Promise<void> {
           await acceptOrRejectJob(jobId, {
             accept: false,
             reason: rejectionReason,
+            memoId,
           });
           return;
         }
@@ -141,6 +145,7 @@ async function handleNewTask(data: AcpJobEventData): Promise<void> {
       await acceptOrRejectJob(jobId, {
         accept: true,
         reason: "Job accepted",
+        memoId,
       });
 
       const funds =
