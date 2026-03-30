@@ -1,8 +1,9 @@
 {
   "name": "product_ux_gate_lite_v1",
-  "description": "Fast UX gate for PMs, founders, and design leads. Paste one onboarding, checkout, approval, dashboard, or landing-page flow with screenshots or a Figma link and get a go-or-revise call in structured JSON. Best for quick product decisions before shipping. Returns one decision, one primary fix, P0 blockers, and sprint-ready next actions.",
+  "description": "Fast UX gate for PMs, founders, and design leads. Paste one onboarding, checkout, approval, dashboard, or landing-page flow and get a structured JSON go-or-revise call in about 5 minutes. Best for quick product decisions before shipping. ACP resources include a sample JSON output and a copy-paste intake template.",
   "jobFee": 0.02,
   "jobFeeType": "fixed",
+  "slaMinutes": 5,
   "deliverable": "json",
   "requiredFunds": false,
   "requirement": {
@@ -11,35 +12,43 @@
     "properties": {
       "url": {
         "type": "string",
-        "description": "URL of the product to review. Can be used as a shorthand — surfaceType, artifactLinks, and other fields will be inferred."
+        "description": "URL of the product to review. Can be used as a shorthand — surfaceType, artifactLinks, and other fields will be inferred.",
+        "examples": ["https://app.example.com/onboarding", "https://www.example.com/pricing"]
       },
       "focus": {
         "type": "string",
-        "description": "What to focus the review on, for example onboarding flow or checkout experience."
+        "description": "What to focus the review on, for example onboarding drop-off, checkout friction, approval clarity, or landing-page task hierarchy.",
+        "examples": ["onboarding drop-off", "checkout conversion friction"]
       },
       "surfaceType": {
         "type": "string",
-        "description": "Surface under review, for example web app, dashboard, mobile app, or landing page. Defaults to 'web app' when url is provided."
+        "description": "Surface under review, for example web app, dashboard, mobile app, or landing page. Defaults to 'web app' when url is provided.",
+        "default": "web app"
       },
       "productSummary": {
         "type": "string",
-        "description": "Short summary of the product and why this surface exists."
+        "description": "Short summary of the product and why this surface exists.",
+        "examples": ["B2B expense tool onboarding for finance teams"]
       },
       "targetUser": {
         "type": "string",
-        "description": "Primary user or decision-maker for this flow."
+        "description": "Primary user or decision-maker for this flow.",
+        "examples": ["first-time buyer", "ops manager reviewing requests"]
       },
       "primaryGoal": {
         "type": "string",
-        "description": "Main user outcome the screen or flow should optimize."
+        "description": "Main user outcome the screen or flow should optimize.",
+        "examples": ["complete first workspace setup", "finish checkout without hesitation"]
       },
       "primaryFlow": {
         "type": "string",
-        "description": "Critical happy path written as a short sequence."
+        "description": "Critical happy path written as a short sequence.",
+        "examples": ["landing page -> sign up -> connect data -> see dashboard"]
       },
       "artifactLinks": {
         "type": "array",
         "description": "One or more links to screenshots, staging pages, Figma frames, or docs.",
+        "default": [],
         "items": {
           "type": "string"
         }

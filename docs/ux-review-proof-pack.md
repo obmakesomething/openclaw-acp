@@ -11,6 +11,7 @@
 ### product_ux_gate_lite_v1
 
 - price: `0.02 USDC`
+- target SLA: `5 minutes`
 - best for: one flow, one decision, one sprint
 - output:
   - `gateVerdict`
@@ -25,6 +26,7 @@
 ### product_ux_review_deep_v1
 
 - price: `0.08 USDC`
+- target SLA: `15 minutes`
 - best for: conversion-critical flow or multi-state audit
 - output:
   - `summary`
@@ -69,6 +71,11 @@ Best context fields:
 - no generic aesthetic commentary
 - focused on hierarchy, task priority, and state clarity
 - optimized for sprint-ready product decisions
+
+## Extra ACP resources
+
+- `ux_review_sample_output` for anonymized JSON examples
+- `ux_review_intake_template` for copy-paste request templates
 
 ## Current proof
 

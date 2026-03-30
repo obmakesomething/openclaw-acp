@@ -1,8 +1,9 @@
 {
   "name": "product_ux_review_deep_v1",
-  "description": "Deep product UX review for PMs, founders, and design leads working on conversion-critical flows. Use this for onboarding, checkout, approval, dashboard, or landing-page audits when you need a PM-ready brief, not aesthetic commentary. Returns structured JSON with flow map, priority issues, IA recommendation, state-policy guidance, and experiment plan.",
+  "description": "Deep product UX review for PMs, founders, and design leads working on conversion-critical flows. Use this for onboarding, checkout, approval, dashboard, or landing-page audits when you need a PM-ready brief in about 15 minutes, not aesthetic commentary. Returns structured JSON with flow map, priority issues, IA recommendation, state-policy guidance, and experiment plan. ACP resources include a sample JSON output and a copy-paste intake template.",
   "jobFee": 0.08,
   "jobFeeType": "fixed",
+  "slaMinutes": 15,
   "deliverable": "json",
   "requiredFunds": false,
   "requirement": {
@@ -11,57 +12,69 @@
     "properties": {
       "url": {
         "type": "string",
-        "description": "URL of the product to review. Can be used as a shorthand — surfaceType, artifactLinks, and other fields will be inferred."
+        "description": "URL of the product to review. Can be used as a shorthand — surfaceType, artifactLinks, and other fields will be inferred.",
+        "examples": ["https://app.example.com/checkout", "https://staging.example.com/dashboard"]
       },
       "focus": {
         "type": "string",
-        "description": "What to focus the review on, for example onboarding flow or checkout experience."
+        "description": "What to focus the review on, for example onboarding drop-off, checkout clarity, approval-state confusion, or dashboard first-action prioritization.",
+        "examples": ["checkout clarity", "dashboard first-action prioritization"]
       },
       "surfaceType": {
         "type": "string",
-        "description": "Surface under review, for example web app, dashboard, mobile app, or landing page. Defaults to 'web app' when url is provided."
+        "description": "Surface under review, for example web app, dashboard, mobile app, or landing page. Defaults to 'web app' when url is provided.",
+        "default": "web app"
       },
       "productSummary": {
         "type": "string",
-        "description": "Short summary of the product and the business context."
+        "description": "Short summary of the product and the business context.",
+        "examples": ["Marketplace checkout flow for repeat mobile buyers"]
       },
       "targetUser": {
         "type": "string",
-        "description": "Primary user or decision-maker for this UX surface."
+        "description": "Primary user or decision-maker for this UX surface.",
+        "examples": ["repeat purchaser", "manager approving employee requests"]
       },
       "primaryGoal": {
         "type": "string",
-        "description": "Main user outcome this review should optimize."
+        "description": "Main user outcome this review should optimize.",
+        "examples": ["increase completed checkouts", "reduce approval confusion"]
       },
       "primaryFlow": {
         "type": "string",
-        "description": "Critical happy path written as a short sequence."
+        "description": "Critical happy path written as a short sequence.",
+        "examples": ["cart -> shipping -> payment -> confirmation"]
       },
       "artifactLinks": {
         "type": "array",
         "description": "Links to screenshots, staging pages, Figma frames, or product docs.",
+        "default": [],
         "items": {
           "type": "string"
         }
       },
       "currentIA": {
         "type": "string",
-        "description": "Current information architecture, nav model, or content grouping. Defaults to 'not provided'."
+        "description": "Current information architecture, nav model, or content grouping. Defaults to 'not provided'.",
+        "default": "not provided"
       },
       "coreScreensOrStates": {
         "type": "array",
         "description": "Key screens or states that must be included in the review. Defaults to ['main screen'].",
+        "default": ["main screen"],
         "items": {
           "type": "string"
         }
       },
       "changeBudget": {
         "type": "string",
-        "description": "Expected implementation budget such as low, medium, or high. Defaults to 'medium'."
+        "description": "Expected implementation budget such as low, medium, or high. Defaults to 'medium'.",
+        "default": "medium"
       },
       "successMetrics": {
         "type": "array",
         "description": "Metrics that define success for this redesign or audit. Defaults to ['task completion rate'].",
+        "default": ["task completion rate"],
         "items": {
           "type": "string"
         }

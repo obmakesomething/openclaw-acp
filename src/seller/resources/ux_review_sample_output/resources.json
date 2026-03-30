@@ -1,0 +1,5 @@
+{
+  "name": "ux_review_sample_output",
+  "description": "Anonymized sample JSON outputs for the lite and deep UX review offers. Buyers can inspect the exact response format before ordering.",
+  "url": "https://raw.githubusercontent.com/obmakesomething/openclaw-acp/codex/feat/ux-review-demand-signal/docs/ux-review-sample-output.md"
+}
