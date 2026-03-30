@@ -1,6 +1,6 @@
 {
   "name": "product_ux_review_deep_v1",
-  "description": "Deep UX audit for onboarding, checkout, approval, dashboard, and landing-page flows. Built for PMs, founders, and design leads who need a PM-ready brief on IA, flow priority, and loading, empty, error, and success states. Returns structured JSON with flow map, priority issues, IA recommendation, state-policy guidance, and experiment plan.",
+  "description": "Deep product UX review for PMs, founders, and design leads working on conversion-critical flows. Use this for onboarding, checkout, approval, dashboard, or landing-page audits when you need a PM-ready brief, not aesthetic commentary. Returns structured JSON with flow map, priority issues, IA recommendation, state-policy guidance, and experiment plan.",
   "jobFee": 0.08,
   "jobFeeType": "fixed",
   "deliverable": "json",

@@ -1,6 +1,6 @@
 {
   "name": "product_ux_gate_lite_v1",
-  "description": "Paste one product flow plus screenshots or a Figma link and get a 5-minute go-or-revise UX gate for onboarding, checkout, approval, dashboard, or landing-page flows. Returns structured JSON with one decision, one primary fix, P0 blockers, and fast sprint-ready next actions.",
+  "description": "Fast UX gate for PMs, founders, and design leads. Paste one onboarding, checkout, approval, dashboard, or landing-page flow with screenshots or a Figma link and get a go-or-revise call in structured JSON. Best for quick product decisions before shipping. Returns one decision, one primary fix, P0 blockers, and sprint-ready next actions.",
   "jobFee": 0.02,
   "jobFeeType": "fixed",
   "deliverable": "json",

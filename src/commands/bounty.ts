@@ -24,7 +24,7 @@ import {
   confirmMatch,
   updateBounty,
 } from "../lib/bounty.js";
-import { ROOT } from "../lib/config.js";
+import { ROOT, getActiveAgent } from "../lib/config.js";
 import { ensureBountyPollCron, removeBountyPollCronIfUnused } from "../lib/openclawCron.js";
 
 function question(rl: readline.Interface, prompt: string): Promise<string> {
@@ -398,8 +398,44 @@ function normalizeCandidateForWatch(candidate: Record<string, unknown>): Record<
   };
 }
 
+export function filterSelfMatchCandidates(
+  candidates: Record<string, unknown>[],
+  self: { activeAgentName?: string; activeWalletAddress?: string }
+): Record<string, unknown>[] {
+  const selfName = self.activeAgentName?.trim().toLowerCase();
+  const selfWallet = self.activeWalletAddress?.trim().toLowerCase();
+
+  return candidates.filter((candidate) => {
+    const candidateName = candidateField(candidate, ["agent_name", "agentName", "name"])
+      ?.trim()
+      .toLowerCase();
+    const candidateWallet = candidateField(candidate, [
+      "agent_wallet",
+      "agentWallet",
+      "agent_wallet_address",
+      "agentWalletAddress",
+      "walletAddress",
+      "providerWalletAddress",
+      "provider_address",
+    ])
+      ?.trim()
+      .toLowerCase();
+
+    if (selfWallet && candidateWallet && candidateWallet === selfWallet) {
+      return false;
+    }
+
+    if (selfName && candidateName && candidateName === selfName) {
+      return false;
+    }
+
+    return true;
+  });
+}
+
 export async function poll(): Promise<void> {
   const bounties = listActiveBounties();
+  const activeAgent = getActiveAgent();
   const result: {
     checked: number;
     pendingMatch: Array<{
@@ -511,12 +547,14 @@ export async function poll(): Promise<void> {
           try {
             const fresh = await getMatchStatus(b.bountyId);
             const freshStatus = String(fresh.status).toLowerCase();
-            if (
-              freshStatus === "pending_match" &&
-              Array.isArray(fresh.candidates) &&
-              fresh.candidates.length > 0
-            ) {
-              candidates = fresh.candidates.map((c) =>
+            const filteredCandidates = Array.isArray(fresh.candidates)
+              ? filterSelfMatchCandidates(fresh.candidates as Record<string, unknown>[], {
+                  activeAgentName: activeAgent?.name ?? b.posterName,
+                  activeWalletAddress: activeAgent?.walletAddress,
+                })
+              : [];
+            if (freshStatus === "pending_match" && filteredCandidates.length > 0) {
+              candidates = filteredCandidates.map((c) =>
                 normalizeCandidateForWatch(c as Record<string, unknown>)
               );
               saveActiveBounty({ ...reset, status: "pending_match", notifiedPendingMatch: true });
@@ -608,7 +646,10 @@ export async function poll(): Promise<void> {
       const isNewPendingMatch =
         status === "pending_match" &&
         Array.isArray(remote.candidates) &&
-        remote.candidates.length > 0 &&
+        filterSelfMatchCandidates(remote.candidates as Record<string, unknown>[], {
+          activeAgentName: activeAgent?.name ?? b.posterName,
+          activeWalletAddress: activeAgent?.walletAddress,
+        }).length > 0 &&
         !b.notifiedPendingMatch;
 
       saveActiveBounty({
@@ -619,9 +660,13 @@ export async function poll(): Promise<void> {
       });
 
       if (isNewPendingMatch) {
-        const candidates = remote.candidates.map((c) =>
-          normalizeCandidateForWatch(c as Record<string, unknown>)
-        );
+        const candidates = filterSelfMatchCandidates(
+          remote.candidates as Record<string, unknown>[],
+          {
+            activeAgentName: activeAgent?.name ?? b.posterName,
+            activeWalletAddress: activeAgent?.walletAddress,
+          }
+        ).map((c) => normalizeCandidateForWatch(c as Record<string, unknown>));
 
         result.pendingMatch.push({
           bountyId: b.bountyId,
@@ -817,12 +862,20 @@ export async function select(bountyId: string): Promise<void> {
   if (String(match.status).toLowerCase() !== "pending_match") {
     output.fatal(`Bounty is not pending_match. Current status: ${match.status}`);
   }
-  if (!Array.isArray(match.candidates) || match.candidates.length === 0) {
+  const activeAgent = getActiveAgent();
+  const filteredCandidates = Array.isArray(match.candidates)
+    ? filterSelfMatchCandidates(match.candidates as Record<string, unknown>[], {
+        activeAgentName: activeAgent?.name ?? active.posterName,
+        activeWalletAddress: activeAgent?.walletAddress,
+      })
+    : [];
+
+  if (filteredCandidates.length === 0) {
     output.fatal("No candidates available for this bounty.");
   }
 
   if (output.isJsonMode()) {
-    output.output({ bountyId, status: match.status, candidates: match.candidates }, () => {});
+    output.output({ bountyId, status: match.status, candidates: filteredCandidates }, () => {});
     return;
   }
 
@@ -833,8 +886,8 @@ export async function select(bountyId: string): Promise<void> {
 
   try {
     output.heading(`Select Candidate for Bounty ${bountyId}`);
-    for (let i = 0; i < match.candidates.length; i++) {
-      const c = match.candidates[i] as Record<string, unknown>;
+    for (let i = 0; i < filteredCandidates.length; i++) {
+      const c = filteredCandidates[i] as Record<string, unknown>;
       const candidateId = parseCandidateId(c.id) ?? -1;
       output.log(`  [${i + 1}] candidateId=${candidateId} ${JSON.stringify(c)}`);
     }
@@ -857,10 +910,10 @@ export async function select(bountyId: string): Promise<void> {
       return;
     }
     const idx = parseInt(choiceRaw, 10) - 1;
-    if (!Number.isInteger(idx) || idx < 0 || idx >= match.candidates.length) {
+    if (!Number.isInteger(idx) || idx < 0 || idx >= filteredCandidates.length) {
       output.fatal("Invalid candidate selection.");
     }
-    const selected = match.candidates[idx] as Record<string, unknown>;
+    const selected = filteredCandidates[idx] as Record<string, unknown>;
     const candidateId = parseCandidateId(selected.id);
     if (candidateId == null) output.fatal("Selected candidate has invalid id.");
 
