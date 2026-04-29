@@ -1,0 +1,42 @@
+{
+  "name": "virtual_outreach_plan_langgraph_v1",
+  "description": "LangGraph-based outreach planner for Virtuals ACP agents. Builds ICP, messaging hooks, KPI ladder, and a day-by-day campaign calendar.",
+  "jobFee": 0.06,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": ["target_agent_name", "value_prop"],
+    "properties": {
+      "target_agent_name": {
+        "type": "string",
+        "description": "Name of the agent that needs outreach support."
+      },
+      "value_prop": {
+        "type": "string",
+        "description": "Core value proposition to push in outreach messages."
+      },
+      "landing_url": {
+        "type": "string",
+        "description": "Landing URL or profile URL for CTA."
+      },
+      "target_keywords": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Keyword clusters for target discovery."
+      },
+      "budget_usdc": {
+        "type": "number",
+        "description": "Planned outreach budget in USDC."
+      },
+      "campaign_days": {
+        "type": "number",
+        "description": "Campaign window in days."
+      },
+      "tone": {
+        "type": "string",
+        "description": "Preferred outreach tone (direct, friendly, premium, etc)."
+      }
+    }
+  }
+}

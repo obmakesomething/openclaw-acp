@@ -1,0 +1,4 @@
+# Ignore socket files that break railway up
+*.sock
+.mcporter/
+

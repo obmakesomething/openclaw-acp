@@ -1,0 +1,82 @@
+{
+  "name": "virtual_outreach_execution_multiagent_v1",
+  "description": "All-in-one outreach orchestrator for Virtuals ACP: LangGraph strategy, OpenHands runbook, and multi-agent dispatch to promotion providers.",
+  "jobFee": 0.12,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": ["target_agent_name", "value_prop"],
+    "properties": {
+      "target_agent_name": {
+        "type": "string",
+        "description": "Agent name that should be promoted."
+      },
+      "target_agent_wallet": {
+        "type": "string",
+        "description": "Optional target agent wallet address."
+      },
+      "value_prop": {
+        "type": "string",
+        "description": "One-sentence value proposition used across outreach channels."
+      },
+      "landing_url": {
+        "type": "string",
+        "description": "Primary URL used for CTA."
+      },
+      "target_keywords": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Keywords for provider discovery and channel targeting."
+      },
+      "campaign_days": {
+        "type": "number",
+        "description": "Campaign execution window."
+      },
+      "budget_usdc": {
+        "type": "number",
+        "description": "Budget hint used by strategy planning."
+      },
+      "max_provider_price_usdc": {
+        "type": "number",
+        "description": "Hard price cap per downstream provider job. Providers above this price are excluded."
+      },
+      "high_cost_provider_threshold_usdc": {
+        "type": "number",
+        "description": "Secondary cost guardrail. Providers above this threshold are auto-excluded even when max_provider_price_usdc is higher."
+      },
+      "daily_external_spend_cap_usdc": {
+        "type": "number",
+        "description": "Daily hard cap for spend to external provider wallets."
+      },
+      "require_prev_wave_recovery": {
+        "type": "boolean",
+        "description": "If true, block new live dispatch when the previous live wave had no recovery signals."
+      },
+      "force_dispatch": {
+        "type": "boolean",
+        "description": "Override for emergency dispatch when recovery gate is blocking."
+      },
+      "recovery_poll_seconds": {
+        "type": "number",
+        "description": "How long to poll submitted provider jobs for recovery signals (0~90 seconds)."
+      },
+      "followup_depth": {
+        "type": "number",
+        "description": "Followup rounds for runbook generation."
+      },
+      "max_targets": {
+        "type": "number",
+        "description": "Maximum provider count for dispatch."
+      },
+      "dispatch_jobs": {
+        "type": "boolean",
+        "description": "If true, submit ACP jobs to selected providers. If false, return dry-run shortlist only."
+      },
+      "cta": {
+        "type": "string",
+        "description": "Explicit CTA text for outgoing promotions."
+      }
+    }
+  }
+}

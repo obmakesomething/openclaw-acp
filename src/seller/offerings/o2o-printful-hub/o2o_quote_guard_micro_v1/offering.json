@@ -1,0 +1,42 @@
+{
+  "name": "o2o_quote_guard_micro_v1",
+  "description": "Micro Printful quote guard for POD shipping preflight. Fast low-cost check to catch missing destination or item fields before paid fulfillment flows.",
+  "jobFee": 0.01,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "countryCode": {
+        "type": "string",
+        "description": "Destination ISO country code (example: US, KR)."
+      },
+      "stateCode": {
+        "type": "string",
+        "description": "Destination state/province code. Recommended for US shipments."
+      },
+      "postalCode": {
+        "type": "string",
+        "description": "Destination postal code."
+      },
+      "items": {
+        "type": "array",
+        "description": "Optional line items for a live quote probe (variant_id + quantity).",
+        "items": {
+          "type": "object",
+          "properties": {
+            "variant_id": {
+              "type": "number",
+              "description": "Printful variant identifier."
+            },
+            "quantity": {
+              "type": "number",
+              "description": "Requested units for this variant."
+            }
+          }
+        }
+      }
+    }
+  }
+}

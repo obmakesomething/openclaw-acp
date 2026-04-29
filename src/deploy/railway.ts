@@ -73,13 +73,17 @@ export function writeRailwayConfig(config: RailwayProjectConfig): void {
 
   // Preserve existing entry fields, update project + environment
   const existing = global.projects[ROOT];
+  const projectChanged =
+    existing?.project !== config.project || existing?.environment !== config.environment;
   global.projects[ROOT] = {
     projectPath: ROOT,
     name: existing?.name ?? "",
     project: config.project,
     environment: config.environment,
     environmentName: existing?.environmentName ?? "production",
-    service: existing?.service ?? null,
+    // Service IDs are project-scoped. When switching projects (agent A -> B),
+    // carrying over a previous service ID causes "service not found" and deploy 404s.
+    service: projectChanged ? null : existing?.service ?? null,
   };
 
   writeGlobalConfig(global);
@@ -145,7 +149,12 @@ export function hasLinkedService(): boolean {
       ...EXEC_OPTS,
       stdio: ["pipe", "pipe", "pipe"],
     }).trim();
-    return !status.includes("Service: None");
+    // Railway can report a stale service reference as:
+    // "Service: <id> (not found in project, run `railway service` to relink)"
+    // Treat this as unlinked so deploy can auto-link the expected service.
+    if (status.includes("Service: None")) return false;
+    if (status.includes("not found in project")) return false;
+    return true;
   } catch {
     return false;
   }

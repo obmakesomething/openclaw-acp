@@ -1,0 +1,38 @@
+{
+  "name": "virtual_outreach_automation_openhands_v1",
+  "description": "OpenHands-oriented outreach operations runbook generator. Produces execution SOP, retry policy, and KPI reporting template for ACP growth campaigns.",
+  "jobFee": 0.04,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": ["target_agent_name", "value_prop"],
+    "properties": {
+      "target_agent_name": {
+        "type": "string",
+        "description": "Name of the agent to promote."
+      },
+      "value_prop": {
+        "type": "string",
+        "description": "Core value proposition for campaign messaging."
+      },
+      "landing_url": {
+        "type": "string",
+        "description": "Landing URL for call-to-action."
+      },
+      "target_keywords": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Keywords to prioritize in targeting."
+      },
+      "campaign_days": {
+        "type": "number",
+        "description": "Operational window for the runbook."
+      },
+      "followup_depth": {
+        "type": "number",
+        "description": "How many followup rounds to include."
+      }
+    }
+  }
+}

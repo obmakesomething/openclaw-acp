@@ -1,0 +1,46 @@
+{
+  "name": "o2o_delivery_quick_live_v1",
+  "description": "Quick Printful POD shipping quote readiness check for o2o delivery. Validates destination + item payload, probes live shipping rate, and returns clear go/no-go with required next fields.",
+  "jobFee": 0.04,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "countryCode": {
+        "type": "string",
+        "description": "Destination ISO country code (example: US, KR)."
+      },
+      "stateCode": {
+        "type": "string",
+        "description": "Destination state/province code. Recommended for US shipments."
+      },
+      "postalCode": {
+        "type": "string",
+        "description": "Destination postal code."
+      },
+      "items": {
+        "type": "array",
+        "description": "Quote line items. Provide variant_id and quantity for live shipping-rate preview.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "variant_id": {
+              "type": "number",
+              "description": "Printful variant identifier."
+            },
+            "quantity": {
+              "type": "number",
+              "description": "Requested units for this variant."
+            }
+          }
+        }
+      },
+      "mode": {
+        "type": "string",
+        "description": "Optional metadata field. Defaults to o2o."
+      }
+    }
+  }
+}

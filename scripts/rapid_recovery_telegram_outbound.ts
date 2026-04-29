@@ -1,5 +1,6 @@
 #!/usr/bin/env npx tsx
 
+import "dotenv/config";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
@@ -11,6 +12,12 @@ import {
   type TelegramSendRecord,
   type TelegramState,
 } from "../src/seller/runtime/revenueSprintGuards.js";
+import {
+  buildRapidRecoveryTelegramMessage,
+  isTelegramTargetEnabled,
+  loadTelegramTargets,
+  type TelegramTargetRow,
+} from "../src/seller/runtime/telegramTargeting.js";
 
 type CliOptions = {
   targetsFile: string;
@@ -21,11 +28,6 @@ type CliOptions = {
   rejectRateSampleMin: number;
   bannedKeywords: string[];
   dryRun: boolean;
-};
-
-type TargetRow = {
-  chatId: string;
-  name?: string;
 };
 
 type SendLogRow = {
@@ -158,15 +160,6 @@ function statePolicy(options: CliOptions): TelegramGuardrailPolicy {
   };
 }
 
-function buildMessage(target: TargetRow): string {
-  return [
-    `Hi ${target.name || "there"},`,
-    "timeout/validation/rejected 이슈를 1줄 입력으로 즉시 복구해드립니다.",
-    "결과: 원인 분류 + retry payload + 실행 next actions(JSON).",
-    "CTA: 0.02 진입(Hotfix) -> 0.05 Turbo -> 0.12 Guardrail",
-  ].join("\n");
-}
-
 function hashMessage(message: string): string {
   return crypto.createHash("sha256").update(message).digest("hex");
 }
@@ -242,7 +235,7 @@ function updateStateAfterSend(state: TelegramState, record: TelegramSendRecord):
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  const targets = readJson<TargetRow[]>(options.targetsFile, []);
+  const targets = loadTelegramTargets(readJson<unknown>(options.targetsFile, []));
   const policy = statePolicy(options);
   const token = String(process.env.TELEGRAM_BOT_TOKEN || "").trim();
 
@@ -255,6 +248,18 @@ async function main() {
 
   for (const target of targets) {
     const nowIso = new Date().toISOString();
+    if (!isTelegramTargetEnabled(target)) {
+      logs.push({
+        who: target.chatId,
+        when: nowIso,
+        template: TEMPLATE_ID,
+        version: TEMPLATE_VERSION,
+        result: "skipped",
+        reason: "target disabled",
+      });
+      continue;
+    }
+
     const global = checkTelegramGlobalStop(state, policy);
     if (!global.allowed) {
       state = {
@@ -273,7 +278,7 @@ async function main() {
       break;
     }
 
-    const message = buildMessage(target);
+    const message = buildRapidRecoveryTelegramMessage(target as TelegramTargetRow);
     const messageHash = hashMessage(message);
     const precheck = decideTelegramSend(state, policy, {
       chatId: target.chatId,

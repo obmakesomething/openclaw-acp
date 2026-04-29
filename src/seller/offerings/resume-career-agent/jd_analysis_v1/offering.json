@@ -1,0 +1,30 @@
+{
+  "name": "jd_analysis_v1",
+  "description": "Analyze a job description and extract structured insights: required skills, seniority level, role family, culture signals, and candidate fit recommendations. Returns a comprehensive JSON analysis useful for resume tailoring, job matching, or recruitment workflows.",
+  "jobFee": 0.02,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "deliverable": "json",
+  "requirement": {
+    "type": "object",
+    "required": ["job_title", "description"],
+    "properties": {
+      "job_title": {
+        "type": "string",
+        "description": "The job title or position name"
+      },
+      "company": {
+        "type": "string",
+        "description": "Company name (optional but improves analysis)"
+      },
+      "description": {
+        "type": "string",
+        "description": "Full job description text including responsibilities and requirements"
+      },
+      "language_hint": {
+        "type": "string",
+        "description": "Preferred output language: 'en' or 'ko' (auto-detected if omitted)"
+      }
+    }
+  }
+}

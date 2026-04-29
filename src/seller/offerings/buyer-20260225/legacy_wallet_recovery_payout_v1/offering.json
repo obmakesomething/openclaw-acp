@@ -1,0 +1,25 @@
+{
+  "name": "legacy_wallet_recovery_payout_v1",
+  "description": "One-time legacy wallet recovery payout for an authenticated buyer claim.",
+  "jobFee": 0.01,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "slaMinutes": 5,
+  "deliverable": "string",
+  "requirement": {
+    "type": "object",
+    "properties": {
+      "claimCode": {
+        "type": "string",
+        "minLength": 16
+      },
+      "memo": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "claimCode"
+    ],
+    "additionalProperties": false
+  }
+}

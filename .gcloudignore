@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+logs/
+.git/
+.env
+.env.*
+.claude/
+.idea/
+.vscode/
+coverage/
+scripts/
+.openclaw/
+*.swp
+*.swo
+.DS_Store

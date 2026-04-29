@@ -1,0 +1,124 @@
+{
+  "SESSION_TOKEN": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNDU5NSwiaWF0IjoxNzcyNjgxNzI3LCJleHAiOjE3NzI2ODM1Mjd9.fwlVE_iZWPeJaqVjd7GWZsvefHlsfFA0qeFbUtoCpL0"
+  },
+  "LITE_AGENT_API_KEY": "acp-dd75125d2bd4988de1ee",
+  "agents": [
+    {
+      "id": 3460,
+      "name": "agent dangu",
+      "walletAddress": "0x57375f39744724Ae5D5A85c1cdd326bd66108745",
+      "apiKey": "acp-556e85dd4caa8b20c0a3",
+      "active": false
+    },
+    {
+      "id": 3885,
+      "name": "printful agent",
+      "walletAddress": "0xcaD730948C0c4D9C37f60aD7ba899514B902e46e",
+      "active": false
+    },
+    {
+      "id": 10329,
+      "name": "buyer-20260225",
+      "walletAddress": "0xA0bef3670ABfEFA95FfDA0C9c193b4648a0F8DdB",
+      "apiKey": "acp-eb29a97b08052d92c80e",
+      "active": false
+    },
+    {
+      "id": 12202,
+      "name": "o2o-printful-hub",
+      "walletAddress": "0x092Bd61Af8EDE22B8291bE9b88259BE8b9845657",
+      "apiKey": "acp-c42b8537e3df516c0e31",
+      "active": false
+    },
+    {
+      "id": 12219,
+      "name": "delivery-orchestrator-hub",
+      "walletAddress": "0xbB8aAB015De360f01a25373be320A73cD19f319E",
+      "apiKey": "acp-dd75125d2bd4988de1ee",
+      "active": true
+    },
+    {
+      "id": 13192,
+      "name": "buyer-20260228",
+      "walletAddress": "0x45cdCE38320097cB7a644a00F5537140bD49Bc8F",
+      "apiKey": "acp-dc2c48e119b999ea4509",
+      "active": false
+    },
+    {
+      "id": 17485,
+      "name": "virtual-outreach-orchestrator",
+      "walletAddress": "0x79d4Cdb36cf5394A2d825F01BFD3a43a6A612Ce7",
+      "apiKey": "acp-be62f23e08ab9c758635",
+      "active": false
+    },
+    {
+      "id": 17506,
+      "name": "printful-agent-recovered",
+      "walletAddress": "0xA93af8e39B5D5108B3e59eA00DC4F9364bAA5864",
+      "apiKey": "acp-44e520fe1ad71852f5dc",
+      "active": false
+    },
+    {
+      "id": 18259,
+      "name": "x-bind-smoke-test-260304",
+      "walletAddress": "0xe3aD623cAe7654278f9Fb6ed653B5f8e3d30e438",
+      "apiKey": "acp-b4bf1e356086291d6cea",
+      "active": false
+    }
+  ],
+  "DEPLOYS": {
+    "12202": {
+      "provider": "railway",
+      "agentName": "o2o-printful-hub",
+      "offerings": [
+        "o2o_delivery_pro_live_v1",
+        "o2o_delivery_quick_live_v1",
+        "o2o_fulfillment_readiness_enterprise_v1",
+        "o2o_quote_guard_micro_v1"
+      ],
+      "deployedAt": "2026-03-02T08:27:29.137Z",
+      "railwayConfig": {
+        "project": "91a59d84-deab-4aa0-82b8-6d9d3af72331",
+        "environment": "42ab9176-069a-4d82-b417-ed550d75c043"
+      }
+    },
+    "12219": {
+      "provider": "railway",
+      "agentName": "delivery-orchestrator-hub",
+      "offerings": [
+        "acp_growth_ops_success_fee_v1",
+        "acp_listing_seo_offer_packaging_v1",
+        "boost_onboarding_micro_v1",
+        "delivery_control_tower_enterprise_v1",
+        "delivery_preflight_quick_v1",
+        "delivery_route_enterprise_v1",
+        "delivery_route_pro_v1",
+        "delivery_route_quick_v1",
+        "delivery_route_quote_pro_v1",
+        "graduation_boost_fast_starter_v1",
+        "graduation_boost_orchestrator_lite_v1",
+        "mutual_boost_liquidity_service_v1"
+      ],
+      "deployedAt": "2026-03-05T03:44:37.010Z",
+      "railwayConfig": {
+        "project": "533e75d8-c556-4913-bb7d-f649fbc8c5d5",
+        "environment": "316da009-6535-4e14-903e-f631e5fcedbd"
+      }
+    },
+    "17485": {
+      "provider": "railway",
+      "agentName": "virtual-outreach-orchestrator",
+      "offerings": [
+        "virtual_outreach_automation_openhands_v1",
+        "virtual_outreach_execution_multiagent_v1",
+        "virtual_outreach_plan_langgraph_v1"
+      ],
+      "deployedAt": "2026-03-05T03:44:31.744Z",
+      "railwayConfig": {
+        "project": "533e75d8-c556-4913-bb7d-f649fbc8c5d5",
+        "environment": "316da009-6535-4e14-903e-f631e5fcedbd"
+      }
+    }
+  }
+}

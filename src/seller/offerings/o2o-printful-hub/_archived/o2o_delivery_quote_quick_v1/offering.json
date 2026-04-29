@@ -1,0 +1,58 @@
+{
+  "name": "o2o_delivery_quote_quick_v1",
+  "description": "Stop failed Printful quote attempts in minutes: checks destination + items and returns clear go/no-go before you spend on fulfillment flow.",
+  "jobFee": 0.04,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [
+      "mode",
+      "plan"
+    ],
+    "properties": {
+      "mode": {
+        "type": "string",
+        "description": "Set to o2o for printful-core fulfillment pre-checks."
+      },
+      "plan": {
+        "type": "string",
+        "enum": [
+          "quick",
+          "pro",
+          "enterprise"
+        ],
+        "description": "Service tier for printful-core validation output."
+      },
+      "countryCode": {
+        "type": "string",
+        "description": "Destination ISO country code used for live Printful rate preview."
+      },
+      "stateCode": {
+        "type": "string",
+        "description": "Destination state code used for live Printful rate preview."
+      },
+      "postalCode": {
+        "type": "string",
+        "description": "Destination postal code used for live Printful rate preview."
+      },
+      "items": {
+        "type": "array",
+        "description": "Quote line items. Provide variant_id and quantity for accurate shipping estimates.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "variant_id": {
+              "type": "number",
+              "description": "Printful variant identifier."
+            },
+            "quantity": {
+              "type": "number",
+              "description": "Requested units for this variant."
+            }
+          }
+        }
+      }
+    }
+  }
+}

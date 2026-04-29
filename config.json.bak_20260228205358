@@ -1,0 +1,86 @@
+{
+  "SESSION_TOKEN": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNDU5NSwiaWF0IjoxNzcyMjc5MTgxLCJleHAiOjE3NzIyODA5ODF9.iO42EcKlq_uKQ_XdLjlm4GF6qDKM4zjJ7-FiW7_teYY"
+  },
+  "LITE_AGENT_API_KEY": "acp-402840bdc491dadd2f73",
+  "agents": [
+    {
+      "id": 3460,
+      "name": "agent dangu",
+      "walletAddress": "0x57375f39744724Ae5D5A85c1cdd326bd66108745",
+      "apiKey": "acp-c9248d8cfe926b1896b3",
+      "active": false
+    },
+    {
+      "id": 3885,
+      "name": "printful agent",
+      "walletAddress": "0xcaD730948C0c4D9C37f60aD7ba899514B902e46e",
+      "active": false
+    },
+    {
+      "id": 10329,
+      "name": "buyer-20260225",
+      "walletAddress": "0xA0bef3670ABfEFA95FfDA0C9c193b4648a0F8DdB",
+      "apiKey": "acp-b7f520237fee07ec478c",
+      "active": false
+    },
+    {
+      "id": 12202,
+      "name": "o2o-printful-hub",
+      "walletAddress": "0x092Bd61Af8EDE22B8291bE9b88259BE8b9845657",
+      "apiKey": "acp-581efd2a1d668a823b36",
+      "active": false
+    },
+    {
+      "id": 12219,
+      "name": "delivery-orchestrator-hub",
+      "walletAddress": "0xbB8aAB015De360f01a25373be320A73cD19f319E",
+      "apiKey": "acp-402840bdc491dadd2f73",
+      "active": true
+    },
+    {
+      "id": 13192,
+      "name": "buyer-20260228",
+      "walletAddress": "0x45cdCE38320097cB7a644a00F5537140bD49Bc8F",
+      "apiKey": "acp-b619423466dd108b1236",
+      "active": false
+    }
+  ],
+  "DEPLOYS": {
+    "12202": {
+      "provider": "railway",
+      "agentName": "o2o-printful-hub",
+      "offerings": [
+        "o2o_address_validation_pro_v1",
+        "o2o_delivery_enterprise_live_v1",
+        "o2o_delivery_pro_live_v1",
+        "o2o_delivery_quick_live_v1",
+        "o2o_delivery_quote_quick_v1",
+        "o2o_fulfillment_readiness_enterprise_v1",
+        "o2o_template_tmp"
+      ],
+      "deployedAt": "2026-02-28T11:47:40.971Z",
+      "railwayConfig": {
+        "project": "91a59d84-deab-4aa0-82b8-6d9d3af72331",
+        "environment": "42ab9176-069a-4d82-b417-ed550d75c043"
+      }
+    },
+    "12219": {
+      "provider": "railway",
+      "agentName": "delivery-orchestrator-hub",
+      "offerings": [
+        "delivery_control_tower_enterprise_v1",
+        "delivery_preflight_quick_v1",
+        "delivery_route_enterprise_v1",
+        "delivery_route_pro_v1",
+        "delivery_route_quick_v1",
+        "delivery_route_quote_pro_v1"
+      ],
+      "deployedAt": "2026-02-28T11:52:14.709Z",
+      "railwayConfig": {
+        "project": "91a59d84-deab-4aa0-82b8-6d9d3af72331",
+        "environment": "42ab9176-069a-4d82-b417-ed550d75c043"
+      }
+    }
+  }
+}

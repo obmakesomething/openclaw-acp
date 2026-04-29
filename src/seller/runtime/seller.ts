@@ -7,6 +7,7 @@
 //   (or)  acp serve start
 // =============================================================================
 
+import http from "http";
 import { connectAcpSocket } from "./acpSocket.js";
 import { acceptOrRejectJob, requestPayment, deliverJob } from "./sellerApi.js";
 import { loadOffering, listOfferings } from "./offerings.js";
@@ -19,6 +20,17 @@ import {
   removePidFromConfig,
   sanitizeAgentName,
 } from "../../lib/config.js";
+
+// Health-check server for Cloud Run / container orchestrators
+const HEALTH_PORT = parseInt(process.env.PORT || "8080", 10);
+http
+  .createServer((_req, res) => {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ status: "ok", agent: agentDirName || "starting" }));
+  })
+  .listen(HEALTH_PORT, () => {
+    console.log(`[seller] Health endpoint listening on :${HEALTH_PORT}`);
+  });
 
 function setupCleanupHandlers(): void {
   const cleanup = () => {

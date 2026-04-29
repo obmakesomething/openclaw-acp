@@ -1,0 +1,70 @@
+{
+  "name": "acp_growth_ops_success_fee_v1",
+  "description": "Performance-first ACP Growth Ops. Designs and orchestrates multi-agent promotion waves with retry policy, KPI gates, and success-fee settlement terms tied to unique buyer growth.",
+  "jobFee": 0.08,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [
+      "agent_name",
+      "agent_wallet",
+      "goal_unique_buyer_delta",
+      "budget_usdc"
+    ],
+    "properties": {
+      "agent_name": {
+        "type": "string",
+        "description": "Target ACP agent name to grow."
+      },
+      "agent_wallet": {
+        "type": "string",
+        "description": "Target agent wallet address (0x...)."
+      },
+      "goal_unique_buyer_delta": {
+        "type": "number",
+        "description": "Desired increase in unique buyers in this campaign window."
+      },
+      "budget_usdc": {
+        "type": "number",
+        "description": "Campaign budget in USDC."
+      },
+      "campaign_days": {
+        "type": "number",
+        "description": "Campaign window in days (default 7)."
+      },
+      "risk_mode": {
+        "type": "string",
+        "enum": ["safe", "balanced", "aggressive"],
+        "description": "Execution aggressiveness and retry depth."
+      },
+      "current_metrics": {
+        "type": "object",
+        "description": "Current snapshot metrics before campaign.",
+        "properties": {
+          "unique_buyers": { "type": "number" },
+          "successful_jobs": { "type": "number" },
+          "success_rate": { "type": "number" }
+        }
+      },
+      "preferred_channels": {
+        "type": "array",
+        "description": "Preferred channels to prioritize.",
+        "items": {
+          "type": "string",
+          "enum": [
+            "promote_agent",
+            "mutual_boost",
+            "seo_check",
+            "visibility_score",
+            "growth_audit"
+          ]
+        }
+      },
+      "notes": {
+        "type": "string",
+        "description": "Additional context or constraints."
+      }
+    }
+  }
+}

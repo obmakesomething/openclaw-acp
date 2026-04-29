@@ -1,0 +1,1389 @@
+{
+  "projectName": "virtuals-protocol-acp",
+  "projectDescription": "Agent Commerce Protocol (ACP) CLI — wallet, marketplace, token, and seller runtime for AI agents",
+  "languages": [
+    "dockerfile",
+    "javascript",
+    "json",
+    "markdown",
+    "shell",
+    "typescript"
+  ],
+  "frameworks": [],
+  "complexityEstimate": "moderate",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "sizeLines": 25,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".env",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".env.example",
+      "sizeLines": 24,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".gcloudignore",
+      "sizeLines": 17,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".gitignore",
+      "sizeLines": 51,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/.gitignore",
+      "sizeLines": 1,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/applypatch-msg",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/commit-msg",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/h",
+      "sizeLines": 23,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/husky.sh",
+      "sizeLines": 9,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/post-applypatch",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/post-checkout",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/post-commit",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/post-merge",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/post-rewrite",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/pre-applypatch",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/pre-auto-gc",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/pre-commit",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/pre-merge-commit",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/pre-push",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/pre-rebase",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/_/prepare-commit-msg",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".husky/pre-commit",
+      "sizeLines": 2,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".prettierignore",
+      "sizeLines": 9,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".prettierrc",
+      "sizeLines": 8,
+      "fileCategory": "data"
+    },
+    {
+      "path": ".railwayignore",
+      "sizeLines": 5,
+      "fileCategory": "data"
+    },
+    {
+      "path": "Dockerfile",
+      "sizeLines": 10,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "README.md",
+      "sizeLines": 279,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "SKILL.md",
+      "sizeLines": 274,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "active-bounties.json",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "bin/acp.ts",
+      "sizeLines": 858,
+      "fileCategory": "code"
+    },
+    {
+      "path": "buyer-active-jobs.json",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "buyer-balance-latest.json",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "buyer-balance.json",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "buyer-topup.json",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "config.json",
+      "sizeLines": 24,
+      "fileCategory": "config"
+    },
+    {
+      "path": "config.json.bak.20260305125542",
+      "sizeLines": 125,
+      "fileCategory": "data"
+    },
+    {
+      "path": "config.json.bak_20260228205358",
+      "sizeLines": 87,
+      "fileCategory": "data"
+    },
+    {
+      "path": "data/rapid_recovery_telegram_seed_candidates.json",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "data/rapid_recovery_telegram_targets.json",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docs/2026-03-02_outreach_profit_mode_summary.md",
+      "sizeLines": 162,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/2026-03-03_outreach_status_check.md",
+      "sizeLines": 63,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/legacy-wallet-recovery-runbook.md",
+      "sizeLines": 91,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/o2o-printful-hub-copy-variants.md",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/o2o-printful-hub-daily-kpi-template.md",
+      "sizeLines": 41,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/o2o-printful-hub-daily-kpi.csv",
+      "sizeLines": 3,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/rapid-recovery-router-7day-sprint.md",
+      "sizeLines": 225,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/ux-review-proof-pack.md",
+      "sizeLines": 77,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "package-lock.json",
+      "sizeLines": 1763,
+      "fileCategory": "config"
+    },
+    {
+      "path": "package.json",
+      "sizeLines": 54,
+      "fileCategory": "config"
+    },
+    {
+      "path": "references/acp-job.md",
+      "sizeLines": 377,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "references/agent-token.md",
+      "sizeLines": 143,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "references/agent-wallet.md",
+      "sizeLines": 148,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "references/bounty.md",
+      "sizeLines": 511,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "references/deploy.md",
+      "sizeLines": 237,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "references/seller.md",
+      "sizeLines": 564,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "scripts/aggregate_agent_usdc.mjs",
+      "sizeLines": 168,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/ensure_seller_running.sh",
+      "sizeLines": 22,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/legacy_wallet_recovery_runner.ts",
+      "sizeLines": 651,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/o2o_printful_kpi_snapshot.sh",
+      "sizeLines": 59,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/openrouter_free_daily_check.mjs",
+      "sizeLines": 291,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/rapid_recovery_autopilot.ts",
+      "sizeLines": 338,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/rapid_recovery_daily_ops.ts",
+      "sizeLines": 154,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/rapid_recovery_kpi_report.ts",
+      "sizeLines": 426,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/rapid_recovery_lead_bounty_loop.ts",
+      "sizeLines": 512,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/rapid_recovery_profile_daily_update.ts",
+      "sizeLines": 162,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/rapid_recovery_telegram_outbound.ts",
+      "sizeLines": 373,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/rapid_recovery_telegram_seed_collect.ts",
+      "sizeLines": 112,
+      "fileCategory": "script"
+    },
+    {
+      "path": "src/commands/agent.ts",
+      "sizeLines": 308,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/bounty.ts",
+      "sizeLines": 1123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/deploy.ts",
+      "sizeLines": 381,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/job.ts",
+      "sizeLines": 194,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/profile.ts",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/resource.ts",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/search.ts",
+      "sizeLines": 299,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/sell.ts",
+      "sizeLines": 820,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/serve.ts",
+      "sizeLines": 236,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/setup.ts",
+      "sizeLines": 353,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/token.ts",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/twitter.ts",
+      "sizeLines": 224,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/commands/wallet.ts",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/deploy/docker.ts",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/deploy/railway.ts",
+      "sizeLines": 269,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/api.ts",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/auth.ts",
+      "sizeLines": 280,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/bounty.ts",
+      "sizeLines": 236,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/client.ts",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/config.ts",
+      "sizeLines": 225,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/open.ts",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/openclawCron.ts",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/output.ts",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/twitterApi.ts",
+      "sizeLines": 168,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/twitterOutreach.ts",
+      "sizeLines": 306,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/wallet.ts",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/acp_growth_ops_success_fee_v1/handlers.ts",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/acp_growth_ops_success_fee_v1/offering.json",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/acp_listing_seo_offer_packaging_v1/handlers.ts",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/acp_listing_seo_offer_packaging_v1/offering.json",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/boost_onboarding_micro_v1/handlers.ts",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/boost_onboarding_micro_v1/offering.json",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/graduation_boost_fast_starter_v1/handlers.ts",
+      "sizeLines": 354,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/graduation_boost_fast_starter_v1/offering.json",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/graduation_boost_orchestrator_lite_v1/handlers.ts",
+      "sizeLines": 598,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/graduation_boost_orchestrator_lite_v1/offering.json",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/mutual_boost_liquidity_service_v1/handlers.ts",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/acp-growth-ops-hub/mutual_boost_liquidity_service_v1/offering.json",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/agent-dangu/o2o_delivery_enterprise_live_v1/handlers.ts",
+      "sizeLines": 187,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/agent-dangu/o2o_delivery_enterprise_live_v1/offering.json",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/agent-dangu/o2o_delivery_pro_live_v1/handlers.ts",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/agent-dangu/o2o_delivery_pro_live_v1/offering.json",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/agent-dangu/o2o_delivery_quick_live_v1/handlers.ts",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/agent-dangu/o2o_delivery_quick_live_v1/offering.json",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/buyer-20260225/legacy_wallet_recovery_payout_v1/handlers.ts",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/buyer-20260225/legacy_wallet_recovery_payout_v1/offering.json",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/buyer-20260225/o2o_delivery_enterprise_live_v1/handlers.ts",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/buyer-20260225/o2o_delivery_enterprise_live_v1/offering.json",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/buyer-20260225/o2o_delivery_pro_live_v1/handlers.ts",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/buyer-20260225/o2o_delivery_pro_live_v1/offering.json",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/buyer-20260225/o2o_delivery_quick_live_v1/handlers.ts",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/buyer-20260225/o2o_delivery_quick_live_v1/offering.json",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/acp_growth_ops_success_fee_v1/handlers.ts",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/acp_growth_ops_success_fee_v1/offering.json",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/acp_listing_seo_offer_packaging_v1/handlers.ts",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/acp_listing_seo_offer_packaging_v1/offering.json",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/boost_onboarding_micro_v1/handlers.ts",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/boost_onboarding_micro_v1/offering.json",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_control_tower_enterprise_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_control_tower_enterprise_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_preflight_quick_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_preflight_quick_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_route_enterprise_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_route_enterprise_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_route_pro_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_route_pro_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_route_quick_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_route_quick_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_route_quote_pro_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/delivery_route_quote_pro_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/graduation_boost_fast_starter_v1/handlers.ts",
+      "sizeLines": 354,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/graduation_boost_fast_starter_v1/offering.json",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/graduation_boost_orchestrator_lite_v1/handlers.ts",
+      "sizeLines": 598,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/graduation_boost_orchestrator_lite_v1/offering.json",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/mutual_boost_liquidity_service_v1/handlers.ts",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-orchestrator-hub/mutual_boost_liquidity_service_v1/offering.json",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_control_tower_enterprise_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_control_tower_enterprise_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_preflight_quick_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_preflight_quick_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_route_enterprise_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_route_enterprise_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_route_pro_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_route_pro_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_route_quick_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_route_quick_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_route_quote_pro_v1/handlers.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/delivery-route-control-hub/delivery_route_quote_pro_v1/offering.json",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/event-raffle-hub/virtuals_event_raffle_kr/handlers.ts",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/event-raffle-hub/virtuals_event_raffle_kr/offering.json",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/event-raffle-hub/virtuals_event_raffle_us/handlers.ts",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/event-raffle-hub/virtuals_event_raffle_us/offering.json",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/job-search-agent/cover_letter_gen_v1/handlers.ts",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/job-search-agent/cover_letter_gen_v1/offering.json",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/job-search-agent/jd_analysis_v1/handlers.ts",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/job-search-agent/jd_analysis_v1/offering.json",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/_archived/o2o_address_validation_pro_v1/handlers.ts",
+      "sizeLines": 191,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/_archived/o2o_address_validation_pro_v1/offering.json",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/_archived/o2o_delivery_enterprise_live_v1/handlers.ts",
+      "sizeLines": 192,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/_archived/o2o_delivery_enterprise_live_v1/offering.json",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/_archived/o2o_delivery_quote_quick_v1/handlers.ts",
+      "sizeLines": 191,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/_archived/o2o_delivery_quote_quick_v1/offering.json",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/_archived/o2o_template_tmp/handlers.ts",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/_archived/o2o_template_tmp/offering.json",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/legacy_wallet_pull_funds_v1/handlers.ts",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/legacy_wallet_pull_funds_v1/offering.json",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/o2o_delivery_pro_live_v1/handlers.ts",
+      "sizeLines": 223,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/o2o_delivery_pro_live_v1/offering.json",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/o2o_delivery_quick_live_v1/handlers.ts",
+      "sizeLines": 197,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/o2o_delivery_quick_live_v1/offering.json",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/o2o_fulfillment_readiness_enterprise_v1/handlers.ts",
+      "sizeLines": 218,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/o2o_fulfillment_readiness_enterprise_v1/offering.json",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/o2o_quote_guard_micro_v1/handlers.ts",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/o2o-printful-hub/o2o_quote_guard_micro_v1/offering.json",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/handlers.ts",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/offering.json",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/handlers.ts",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/offering.json",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/handlers.ts",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/offering.json",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/resume-career-agent/cover_letter_gen_v1/handlers.ts",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/resume-career-agent/cover_letter_gen_v1/offering.json",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/resume-career-agent/jd_analysis_v1/handlers.ts",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/resume-career-agent/jd_analysis_v1/offering.json",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/handlers.ts",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/offering.json",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/handlers.ts",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/offering.json",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_automation_openhands_v1/handlers.ts",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_automation_openhands_v1/offering.json",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_execution_multiagent_v1/handlers.ts",
+      "sizeLines": 163,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_execution_multiagent_v1/offering.json",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_plan_langgraph_v1/handlers.ts",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_plan_langgraph_v1/offering.json",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/resources/ux_review_proof_pack/resources.json",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/acpSocket.ts",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/agent_framework_worker.py",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/offeringTypes.ts",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/offerings.ts",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/openrouterRecovery.ts",
+      "sizeLines": 279,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/outreachEngines.ts",
+      "sizeLines": 1134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/outreach_langgraph.py",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/rapidRecoveryAutopilot.ts",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/rapidRecoveryDailyPhase.ts",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/recoveryRouterOfferings.ts",
+      "sizeLines": 183,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/revenueSprintGuards.ts",
+      "sizeLines": 225,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/seller.ts",
+      "sizeLines": 268,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/sellerApi.ts",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/telegramTargeting.ts",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/types.ts",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/seller/runtime/uxReviewOrchestrator.ts",
+      "sizeLines": 795,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test-bounty.sh",
+      "sizeLines": 369,
+      "fileCategory": "data"
+    },
+    {
+      "path": "test-cli.sh",
+      "sizeLines": 235,
+      "fileCategory": "data"
+    },
+    {
+      "path": "tests/bounty_self_match_filter.test.ts",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/legacy_wallet_pull_funds.test.ts",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/legacy_wallet_recovery_runner.test.ts",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/openrouter_recovery.test.ts",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/outreach_finance_guards.test.ts",
+      "sizeLines": 154,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/rapid_recovery_autopilot.test.ts",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/rapid_recovery_daily_phase.test.ts",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/rapid_recovery_profile_update.test.ts",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/rapid_recovery_telegram_outbound.test.ts",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/recovery_offerings_smoke.test.ts",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/recovery_router_offerings.test.ts",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/revenue_sprint_guards.test.ts",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/telegram_targeting.test.ts",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/ux_review_offerings.test.ts",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tmp_regen_probe.ts",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tsconfig.json",
+      "sizeLines": 21,
+      "fileCategory": "config"
+    }
+  ],
+  "importMap": {
+    "bin/acp.ts": [
+      "package.json"
+    ],
+    "scripts/aggregate_agent_usdc.mjs": [],
+    "scripts/ensure_seller_running.sh": [],
+    "scripts/legacy_wallet_recovery_runner.ts": [],
+    "scripts/o2o_printful_kpi_snapshot.sh": [],
+    "scripts/openrouter_free_daily_check.mjs": [],
+    "scripts/rapid_recovery_autopilot.ts": [],
+    "scripts/rapid_recovery_daily_ops.ts": [],
+    "scripts/rapid_recovery_kpi_report.ts": [],
+    "scripts/rapid_recovery_lead_bounty_loop.ts": [],
+    "scripts/rapid_recovery_profile_daily_update.ts": [],
+    "scripts/rapid_recovery_telegram_outbound.ts": [],
+    "scripts/rapid_recovery_telegram_seed_collect.ts": [],
+    "src/commands/agent.ts": [],
+    "src/commands/bounty.ts": [],
+    "src/commands/deploy.ts": [],
+    "src/commands/job.ts": [],
+    "src/commands/profile.ts": [],
+    "src/commands/resource.ts": [],
+    "src/commands/search.ts": [],
+    "src/commands/sell.ts": [],
+    "src/commands/serve.ts": [],
+    "src/commands/setup.ts": [],
+    "src/commands/token.ts": [],
+    "src/commands/twitter.ts": [],
+    "src/commands/wallet.ts": [],
+    "src/deploy/docker.ts": [],
+    "src/deploy/railway.ts": [],
+    "src/lib/api.ts": [],
+    "src/lib/auth.ts": [],
+    "src/lib/bounty.ts": [],
+    "src/lib/client.ts": [],
+    "src/lib/config.ts": [],
+    "src/lib/open.ts": [],
+    "src/lib/openclawCron.ts": [],
+    "src/lib/output.ts": [],
+    "src/lib/twitterApi.ts": [],
+    "src/lib/twitterOutreach.ts": [],
+    "src/lib/wallet.ts": [],
+    "src/seller/offerings/acp-growth-ops-hub/acp_growth_ops_success_fee_v1/handlers.ts": [],
+    "src/seller/offerings/acp-growth-ops-hub/acp_growth_ops_success_fee_v1/offering.json": [],
+    "src/seller/offerings/acp-growth-ops-hub/acp_listing_seo_offer_packaging_v1/handlers.ts": [],
+    "src/seller/offerings/acp-growth-ops-hub/acp_listing_seo_offer_packaging_v1/offering.json": [],
+    "src/seller/offerings/acp-growth-ops-hub/boost_onboarding_micro_v1/handlers.ts": [],
+    "src/seller/offerings/acp-growth-ops-hub/boost_onboarding_micro_v1/offering.json": [],
+    "src/seller/offerings/acp-growth-ops-hub/graduation_boost_fast_starter_v1/handlers.ts": [],
+    "src/seller/offerings/acp-growth-ops-hub/graduation_boost_fast_starter_v1/offering.json": [],
+    "src/seller/offerings/acp-growth-ops-hub/graduation_boost_orchestrator_lite_v1/handlers.ts": [],
+    "src/seller/offerings/acp-growth-ops-hub/graduation_boost_orchestrator_lite_v1/offering.json": [],
+    "src/seller/offerings/acp-growth-ops-hub/mutual_boost_liquidity_service_v1/handlers.ts": [],
+    "src/seller/offerings/acp-growth-ops-hub/mutual_boost_liquidity_service_v1/offering.json": [],
+    "src/seller/offerings/agent-dangu/o2o_delivery_enterprise_live_v1/handlers.ts": [],
+    "src/seller/offerings/agent-dangu/o2o_delivery_enterprise_live_v1/offering.json": [],
+    "src/seller/offerings/agent-dangu/o2o_delivery_pro_live_v1/handlers.ts": [],
+    "src/seller/offerings/agent-dangu/o2o_delivery_pro_live_v1/offering.json": [],
+    "src/seller/offerings/agent-dangu/o2o_delivery_quick_live_v1/handlers.ts": [],
+    "src/seller/offerings/agent-dangu/o2o_delivery_quick_live_v1/offering.json": [],
+    "src/seller/offerings/buyer-20260225/legacy_wallet_recovery_payout_v1/handlers.ts": [],
+    "src/seller/offerings/buyer-20260225/legacy_wallet_recovery_payout_v1/offering.json": [],
+    "src/seller/offerings/buyer-20260225/o2o_delivery_enterprise_live_v1/handlers.ts": [],
+    "src/seller/offerings/buyer-20260225/o2o_delivery_enterprise_live_v1/offering.json": [],
+    "src/seller/offerings/buyer-20260225/o2o_delivery_pro_live_v1/handlers.ts": [],
+    "src/seller/offerings/buyer-20260225/o2o_delivery_pro_live_v1/offering.json": [],
+    "src/seller/offerings/buyer-20260225/o2o_delivery_quick_live_v1/handlers.ts": [],
+    "src/seller/offerings/buyer-20260225/o2o_delivery_quick_live_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/acp_growth_ops_success_fee_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/acp_growth_ops_success_fee_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/acp_listing_seo_offer_packaging_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/acp_listing_seo_offer_packaging_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/boost_onboarding_micro_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/boost_onboarding_micro_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_control_tower_enterprise_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_control_tower_enterprise_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_preflight_quick_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_preflight_quick_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_route_enterprise_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_route_enterprise_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_route_pro_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_route_pro_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_route_quick_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_route_quick_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_route_quote_pro_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/delivery_route_quote_pro_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/graduation_boost_fast_starter_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/graduation_boost_fast_starter_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/graduation_boost_orchestrator_lite_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/graduation_boost_orchestrator_lite_v1/offering.json": [],
+    "src/seller/offerings/delivery-orchestrator-hub/mutual_boost_liquidity_service_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-orchestrator-hub/mutual_boost_liquidity_service_v1/offering.json": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_control_tower_enterprise_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_control_tower_enterprise_v1/offering.json": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_preflight_quick_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_preflight_quick_v1/offering.json": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_route_enterprise_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_route_enterprise_v1/offering.json": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_route_pro_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_route_pro_v1/offering.json": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_route_quick_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_route_quick_v1/offering.json": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_route_quote_pro_v1/handlers.ts": [],
+    "src/seller/offerings/delivery-route-control-hub/delivery_route_quote_pro_v1/offering.json": [],
+    "src/seller/offerings/event-raffle-hub/virtuals_event_raffle_kr/handlers.ts": [],
+    "src/seller/offerings/event-raffle-hub/virtuals_event_raffle_kr/offering.json": [],
+    "src/seller/offerings/event-raffle-hub/virtuals_event_raffle_us/handlers.ts": [],
+    "src/seller/offerings/event-raffle-hub/virtuals_event_raffle_us/offering.json": [],
+    "src/seller/offerings/job-search-agent/cover_letter_gen_v1/handlers.ts": [],
+    "src/seller/offerings/job-search-agent/cover_letter_gen_v1/offering.json": [],
+    "src/seller/offerings/job-search-agent/jd_analysis_v1/handlers.ts": [],
+    "src/seller/offerings/job-search-agent/jd_analysis_v1/offering.json": [],
+    "src/seller/offerings/o2o-printful-hub/_archived/o2o_address_validation_pro_v1/handlers.ts": [],
+    "src/seller/offerings/o2o-printful-hub/_archived/o2o_address_validation_pro_v1/offering.json": [],
+    "src/seller/offerings/o2o-printful-hub/_archived/o2o_delivery_enterprise_live_v1/handlers.ts": [],
+    "src/seller/offerings/o2o-printful-hub/_archived/o2o_delivery_enterprise_live_v1/offering.json": [],
+    "src/seller/offerings/o2o-printful-hub/_archived/o2o_delivery_quote_quick_v1/handlers.ts": [],
+    "src/seller/offerings/o2o-printful-hub/_archived/o2o_delivery_quote_quick_v1/offering.json": [],
+    "src/seller/offerings/o2o-printful-hub/_archived/o2o_template_tmp/handlers.ts": [],
+    "src/seller/offerings/o2o-printful-hub/_archived/o2o_template_tmp/offering.json": [],
+    "src/seller/offerings/o2o-printful-hub/legacy_wallet_pull_funds_v1/handlers.ts": [],
+    "src/seller/offerings/o2o-printful-hub/legacy_wallet_pull_funds_v1/offering.json": [],
+    "src/seller/offerings/o2o-printful-hub/o2o_delivery_pro_live_v1/handlers.ts": [],
+    "src/seller/offerings/o2o-printful-hub/o2o_delivery_pro_live_v1/offering.json": [],
+    "src/seller/offerings/o2o-printful-hub/o2o_delivery_quick_live_v1/handlers.ts": [],
+    "src/seller/offerings/o2o-printful-hub/o2o_delivery_quick_live_v1/offering.json": [],
+    "src/seller/offerings/o2o-printful-hub/o2o_fulfillment_readiness_enterprise_v1/handlers.ts": [],
+    "src/seller/offerings/o2o-printful-hub/o2o_fulfillment_readiness_enterprise_v1/offering.json": [],
+    "src/seller/offerings/o2o-printful-hub/o2o_quote_guard_micro_v1/handlers.ts": [],
+    "src/seller/offerings/o2o-printful-hub/o2o_quote_guard_micro_v1/offering.json": [],
+    "src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/handlers.ts": [],
+    "src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/offering.json": [],
+    "src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/handlers.ts": [],
+    "src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/offering.json": [],
+    "src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/handlers.ts": [],
+    "src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/offering.json": [],
+    "src/seller/offerings/resume-career-agent/cover_letter_gen_v1/handlers.ts": [],
+    "src/seller/offerings/resume-career-agent/cover_letter_gen_v1/offering.json": [],
+    "src/seller/offerings/resume-career-agent/jd_analysis_v1/handlers.ts": [],
+    "src/seller/offerings/resume-career-agent/jd_analysis_v1/offering.json": [],
+    "src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/handlers.ts": [],
+    "src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/offering.json": [],
+    "src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/handlers.ts": [],
+    "src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/offering.json": [],
+    "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_automation_openhands_v1/handlers.ts": [],
+    "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_automation_openhands_v1/offering.json": [],
+    "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_execution_multiagent_v1/handlers.ts": [],
+    "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_execution_multiagent_v1/offering.json": [],
+    "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_plan_langgraph_v1/handlers.ts": [],
+    "src/seller/offerings/virtual-outreach-orchestrator/virtual_outreach_plan_langgraph_v1/offering.json": [],
+    "src/seller/resources/ux_review_proof_pack/resources.json": [],
+    "src/seller/runtime/acpSocket.ts": [],
+    "src/seller/runtime/agent_framework_worker.py": [],
+    "src/seller/runtime/offeringTypes.ts": [],
+    "src/seller/runtime/offerings.ts": [],
+    "src/seller/runtime/openrouterRecovery.ts": [],
+    "src/seller/runtime/outreachEngines.ts": [],
+    "src/seller/runtime/outreach_langgraph.py": [],
+    "src/seller/runtime/rapidRecoveryAutopilot.ts": [],
+    "src/seller/runtime/rapidRecoveryDailyPhase.ts": [],
+    "src/seller/runtime/recoveryRouterOfferings.ts": [],
+    "src/seller/runtime/revenueSprintGuards.ts": [],
+    "src/seller/runtime/seller.ts": [],
+    "src/seller/runtime/sellerApi.ts": [],
+    "src/seller/runtime/telegramTargeting.ts": [],
+    "src/seller/runtime/types.ts": [],
+    "src/seller/runtime/uxReviewOrchestrator.ts": [],
+    "tests/bounty_self_match_filter.test.ts": [
+      "src/commands/bounty.ts"
+    ],
+    "tests/legacy_wallet_pull_funds.test.ts": [],
+    "tests/legacy_wallet_recovery_runner.test.ts": [],
+    "tests/openrouter_recovery.test.ts": [],
+    "tests/outreach_finance_guards.test.ts": [],
+    "tests/rapid_recovery_autopilot.test.ts": [],
+    "tests/rapid_recovery_daily_phase.test.ts": [],
+    "tests/rapid_recovery_profile_update.test.ts": [],
+    "tests/rapid_recovery_telegram_outbound.test.ts": [],
+    "tests/recovery_offerings_smoke.test.ts": [],
+    "tests/recovery_router_offerings.test.ts": [],
+    "tests/revenue_sprint_guards.test.ts": [],
+    "tests/telegram_targeting.test.ts": [],
+    "tests/ux_review_offerings.test.ts": [
+      "src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/handlers.ts",
+      "src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/handlers.ts"
+    ],
+    "tmp_regen_probe.ts": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "graduation_boost_fast_starter_v1",
+  "description": "Fast starter outreach pack. Runs a short, low-cost whitelist boost path for immediate traction and proof jobIds.",
+  "jobFee": 0.03,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": ["target_agent_wallet"],
+    "properties": {
+      "target_agent_wallet": {
+        "type": "string",
+        "description": "Target agent wallet address to boost (0x...)."
+      },
+      "target_agent_name": {
+        "type": "string",
+        "description": "Optional target agent name for reporting."
+      },
+      "target_offering_name": {
+        "type": "string",
+        "description": "Optional specific offering name for reciprocal buys."
+      },
+      "max_wait_seconds": {
+        "type": "number",
+        "description": "Polling timeout per downstream job (default 90, range 60~180)."
+      }
+    }
+  }
+}

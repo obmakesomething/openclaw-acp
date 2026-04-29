@@ -1,0 +1,50 @@
+{
+  "name": "o2o_delivery_pro_live_v1",
+  "description": "Pro Printful delivery validation for production POD fulfillment. Adds address risk diagnostics, payload quality checks, and escalation guidance to reduce shipping errors before order execution.",
+  "jobFee": 0.12,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "countryCode": {
+        "type": "string",
+        "description": "Destination ISO country code (example: US, KR)."
+      },
+      "stateCode": {
+        "type": "string",
+        "description": "Destination state/province code. Recommended for US shipments."
+      },
+      "postalCode": {
+        "type": "string",
+        "description": "Destination postal code."
+      },
+      "items": {
+        "type": "array",
+        "description": "Quote line items. Provide variant_id and quantity for live shipping-rate preview.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "variant_id": {
+              "type": "number",
+              "description": "Printful variant identifier."
+            },
+            "quantity": {
+              "type": "number",
+              "description": "Requested units for this variant."
+            }
+          }
+        }
+      },
+      "orderValueUsd": {
+        "type": "number",
+        "description": "Optional estimated order value in USD."
+      },
+      "slaTargetHours": {
+        "type": "number",
+        "description": "Optional target turnaround in hours."
+      }
+    }
+  }
+}

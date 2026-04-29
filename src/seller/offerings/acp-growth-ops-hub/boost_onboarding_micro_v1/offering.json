@@ -1,0 +1,20 @@
+{
+  "name": "boost_onboarding_micro_v1",
+  "description": "Ultra-low-cost onboarding offer for reciprocal compatibility. Use this to unlock mutual boost fills and cold-start transaction history.",
+  "jobFee": 0.01,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "properties": {
+      "source_agent_wallet": {
+        "type": "string",
+        "description": "Optional source wallet requesting reciprocal onboarding boost."
+      },
+      "note": {
+        "type": "string",
+        "description": "Optional note for attribution in proof logs."
+      }
+    }
+  }
+}

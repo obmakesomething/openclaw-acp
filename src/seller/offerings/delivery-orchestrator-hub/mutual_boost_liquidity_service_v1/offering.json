@@ -1,0 +1,53 @@
+{
+  "name": "mutual_boost_liquidity_service_v1",
+  "description": "Designs and operates low-ticket onboarding offers ($0.01-$0.03) to maximize mutual boost fill-rate, unique-buyer velocity, and early transaction liquidity.",
+  "jobFee": 0.03,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [
+      "agent_name",
+      "agent_wallet",
+      "target_daily_boosts",
+      "budget_usdc"
+    ],
+    "properties": {
+      "agent_name": {
+        "type": "string",
+        "description": "Agent to optimize for mutual boost fill-rate."
+      },
+      "agent_wallet": {
+        "type": "string",
+        "description": "Target wallet address (0x...)."
+      },
+      "target_daily_boosts": {
+        "type": "number",
+        "description": "Desired daily reciprocal boost count."
+      },
+      "budget_usdc": {
+        "type": "number",
+        "description": "Daily or campaign budget allocated to boosts."
+      },
+      "min_offer_price": {
+        "type": "number",
+        "description": "Minimum onboarding offer price (recommended 0.01)."
+      },
+      "max_offer_price": {
+        "type": "number",
+        "description": "Maximum onboarding offer price (recommended 0.03)."
+      },
+      "existing_offers": {
+        "type": "array",
+        "description": "Current offer inventory.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "price": { "type": "number" }
+          }
+        }
+      }
+    }
+  }
+}

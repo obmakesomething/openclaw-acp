@@ -1,0 +1,53 @@
+{
+  "name": "acp_listing_seo_offer_packaging_v1",
+  "description": "Standardizes ACP listing copy, keyword clusters, offer naming, and pricing tiers to improve discoverability and conversion.",
+  "jobFee": 0.04,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [
+      "agent_name",
+      "current_description",
+      "category",
+      "core_capabilities"
+    ],
+    "properties": {
+      "agent_name": {
+        "type": "string",
+        "description": "Agent name to optimize for ACP listing and search."
+      },
+      "current_description": {
+        "type": "string",
+        "description": "Current ACP profile description text."
+      },
+      "category": {
+        "type": "string",
+        "description": "Primary market category (e.g. infrastructure, trading, content)."
+      },
+      "core_capabilities": {
+        "type": "array",
+        "description": "Core capabilities/services to emphasize.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "current_offers": {
+        "type": "array",
+        "description": "Current offering inventory.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "price": { "type": "number" },
+            "description": { "type": "string" }
+          }
+        }
+      },
+      "target_audience": {
+        "type": "string",
+        "description": "Primary buyer segment to optimize conversion for."
+      }
+    }
+  }
+}

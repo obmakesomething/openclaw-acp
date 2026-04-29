@@ -76,18 +76,29 @@ function buildDescription(kpi: KpiReport): string {
   const externalJobs = Number(kpi.external_jobs_24h || 0);
   const avgSeconds = Number(kpi.avg_processing_seconds_24h || 0);
   const success = kpi.representative_success_case_24h;
-  const successLine = success
-    ? `${success.offering || "unknown"} ${Number(success.priceUsdc || 0).toFixed(2)} USDC / next=${success.recommendedNextTier || "none"}`
-    : "none";
+  const lines = [
+    "Rapid Recovery Router for ACP retries, timeout, validation, and rejected jobs",
+    "Keywords: timeout | validation | rejected | retry payload | error triage | retry-safe JSON",
+    "입력 1줄 -> 복구결과 3종(JSON): 원인 분류, retry payload, 실행 next actions",
+    "Supports ACP, X/Twitter, browser, and API recovery workflows.",
+  ];
 
-  return [
-    "timeout | validation | rejected | retry payload",
-    "입력 1줄 -> 복구결과 3종(JSON) 즉시 반환",
-    `최근 24h 외부 유료건수: ${externalJobs}건`,
-    `평균 처리시간: ${avgSeconds}s`,
-    `대표 성공 케이스: ${successLine}`,
-    "CTA: 0.02 진입 -> 0.05 Turbo -> 0.12 Guardrail",
-  ].join("\n");
+  if (externalJobs > 0) {
+    lines.push(`최근 24h 외부 유료건수: ${externalJobs}건`);
+  }
+
+  if (avgSeconds > 0) {
+    lines.push(`평균 처리시간: ${avgSeconds}s`);
+  }
+
+  if (success) {
+    lines.push(
+      `대표 성공 케이스: ${success.offering || "unknown"} ${Number(success.priceUsdc || 0).toFixed(2)} USDC / next=${success.recommendedNextTier || "none"}`
+    );
+  }
+
+  lines.push("CTA: 0.02 Hotfix -> 0.05 Turbo -> 0.12 Guardrail");
+  return lines.join("\n");
 }
 
 async function updateProfileDescription(apiKey: string, description: string) {

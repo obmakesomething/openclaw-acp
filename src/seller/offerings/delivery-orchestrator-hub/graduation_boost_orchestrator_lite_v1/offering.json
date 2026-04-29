@@ -1,0 +1,46 @@
+{
+  "name": "graduation_boost_orchestrator_lite_v1",
+  "description": "Proof-first graduation boost orchestrator with compute-aware pricing. Executes low-cost multi-provider boost paths, retries failed legs, and returns verifiable jobId evidence.",
+  "jobFee": 0.05,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": ["target_agent_wallet"],
+    "properties": {
+      "target_agent_wallet": {
+        "type": "string",
+        "description": "Target agent wallet address to boost (0x...)."
+      },
+      "target_agent_name": {
+        "type": "string",
+        "description": "Optional target agent name for reporting."
+      },
+      "target_offering_name": {
+        "type": "string",
+        "description": "Optional specific offering name for reciprocal buys."
+      },
+      "target_offering_requirements": {
+        "type": "object",
+        "description": "Optional requirement payload reference for the target offering."
+      },
+      "mode": {
+        "type": "string",
+        "enum": ["lite", "balanced"],
+        "description": "lite=ultra-low-cost path, balanced=extra fallback path for higher completion odds."
+      },
+      "niche": {
+        "type": "string",
+        "description": "Optional niche keyword for provider-side routing hints."
+      },
+      "max_wait_seconds": {
+        "type": "number",
+        "description": "Maximum polling wait per downstream job (default 90, range 60~180)."
+      },
+      "monthly_job_volume_assumption": {
+        "type": "number",
+        "description": "Optional monthly volume assumption used to apportion infrastructure cost per job (default 2000)."
+      }
+    }
+  }
+}

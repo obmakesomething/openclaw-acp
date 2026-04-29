@@ -1,0 +1,68 @@
+{
+  "name": "delivery_preflight_quick_v1",
+  "description": "Block bad delivery requests early and ship faster: minimum destination checks with baseline ETA handoff in one response.",
+  "jobFee": 0.04,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [
+      "mode",
+      "plan"
+    ],
+    "properties": {
+      "mode": {
+        "type": "string",
+        "description": "Intent mode: delivery for direct routing, o2o for marketplace handoff flow."
+      },
+      "plan": {
+        "type": "string",
+        "enum": [
+          "quick",
+          "pro",
+          "enterprise"
+        ],
+        "description": "Routing analysis tier."
+      },
+      "destination": {
+        "type": "object",
+        "description": "Delivery destination used for routing and SLA estimation.",
+        "properties": {
+          "countryCode": {
+            "type": "string",
+            "description": "Destination ISO country code."
+          },
+          "stateCode": {
+            "type": "string",
+            "description": "Destination state code."
+          },
+          "postalCode": {
+            "type": "string",
+            "description": "Destination postal code."
+          },
+          "addressLine1": {
+            "type": "string",
+            "description": "Primary address line for delivery routing."
+          }
+        }
+      },
+      "items": {
+        "type": "array",
+        "description": "Optional line items forwarded to downstream printful-core handoff.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "variant_id": {
+              "type": "number",
+              "description": "Variant identifier used by fulfillment provider."
+            },
+            "quantity": {
+              "type": "number",
+              "description": "Requested units for this variant."
+            }
+          }
+        }
+      }
+    }
+  }
+}

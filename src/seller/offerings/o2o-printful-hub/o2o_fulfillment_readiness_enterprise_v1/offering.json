@@ -1,0 +1,50 @@
+{
+  "name": "o2o_fulfillment_readiness_enterprise_v1",
+  "description": "Enterprise Printful fulfillment readiness gate for high-volume POD operations. Produces risk flags, execution controls, and escalation-grade diagnostics before bulk order creation.",
+  "jobFee": 0.4,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "countryCode": {
+        "type": "string",
+        "description": "Destination ISO country code (example: US, KR)."
+      },
+      "stateCode": {
+        "type": "string",
+        "description": "Destination state/province code. Recommended for US shipments."
+      },
+      "postalCode": {
+        "type": "string",
+        "description": "Destination postal code."
+      },
+      "items": {
+        "type": "array",
+        "description": "Quote line items. Provide variant_id and quantity for live shipping-rate preview.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "variant_id": {
+              "type": "number",
+              "description": "Printful variant identifier."
+            },
+            "quantity": {
+              "type": "number",
+              "description": "Requested units for this variant."
+            }
+          }
+        }
+      },
+      "monthlyOrderVolume": {
+        "type": "number",
+        "description": "Optional expected monthly order volume."
+      },
+      "idempotencyRequired": {
+        "type": "boolean",
+        "description": "Optional. Set true if your execution stack enforces idempotency keys."
+      }
+    }
+  }
+}

@@ -1,8 +1,10 @@
 #!/usr/bin/env npx tsx
 
+import "dotenv/config";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
 import process from "node:process";
+import { resolveRapidRecoveryDailyModes } from "../src/seller/runtime/rapidRecoveryDailyPhase.js";
 
 type CliOptions = {
   dryRun: boolean;
@@ -34,6 +36,7 @@ function parseMaybeJson(raw: string): unknown {
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   const cwd = process.cwd();
+  const liveModes = resolveRapidRecoveryDailyModes(process.env);
   const nowKey = new Date().toISOString().slice(0, 10).replaceAll("-", "");
   const kpiJson = path.resolve(cwd, "logs", `rapid_recovery_kpi_${nowKey}.json`);
   const kpiCsv = path.resolve(cwd, "logs", `rapid_recovery_kpi_${nowKey}.csv`);
@@ -41,6 +44,7 @@ async function main() {
   const summary: Record<string, unknown> = {
     executedAt: new Date().toISOString(),
     dryRun: options.dryRun,
+    liveModes,
     steps: [],
   };
 
@@ -117,22 +121,22 @@ async function main() {
 
   pushStep(
     "lead_bounty_loop",
-    options.dryRun
+    options.dryRun || !liveModes.leadBountyLive
       ? "npx tsx scripts/rapid_recovery_lead_bounty_loop.ts --dry-run"
       : "npx tsx scripts/rapid_recovery_lead_bounty_loop.ts",
     () =>
-      options.dryRun
+      options.dryRun || !liveModes.leadBountyLive
         ? runStep("npx", ["tsx", "scripts/rapid_recovery_lead_bounty_loop.ts", "--dry-run"], cwd)
         : runStep("npx", ["tsx", "scripts/rapid_recovery_lead_bounty_loop.ts"], cwd)
   );
 
   pushStep(
     "telegram_outbound",
-    options.dryRun
+    options.dryRun || !liveModes.telegramLive
       ? "npx tsx scripts/rapid_recovery_telegram_outbound.ts --dry-run"
       : "npx tsx scripts/rapid_recovery_telegram_outbound.ts",
     () =>
-      options.dryRun
+      options.dryRun || !liveModes.telegramLive
         ? runStep("npx", ["tsx", "scripts/rapid_recovery_telegram_outbound.ts", "--dry-run"], cwd)
         : runStep("npx", ["tsx", "scripts/rapid_recovery_telegram_outbound.ts"], cwd)
   );

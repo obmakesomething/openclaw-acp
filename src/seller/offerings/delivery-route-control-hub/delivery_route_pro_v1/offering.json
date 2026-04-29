@@ -1,0 +1,68 @@
+{
+  "name": "delivery_route_pro_v1",
+  "description": "Delivery-orchestrator Pro: adds stronger routing policy checks, tighter SLA estimation, and cleaner handoff payload for printful-core execution.",
+  "jobFee": 0.09,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "requirement": {
+    "type": "object",
+    "required": [
+      "mode",
+      "plan"
+    ],
+    "properties": {
+      "mode": {
+        "type": "string",
+        "description": "Intent mode: delivery for direct routing, o2o for marketplace handoff flow."
+      },
+      "plan": {
+        "type": "string",
+        "enum": [
+          "quick",
+          "pro",
+          "enterprise"
+        ],
+        "description": "Routing analysis tier."
+      },
+      "destination": {
+        "type": "object",
+        "description": "Delivery destination used for routing and SLA estimation.",
+        "properties": {
+          "countryCode": {
+            "type": "string",
+            "description": "Destination ISO country code."
+          },
+          "stateCode": {
+            "type": "string",
+            "description": "Destination state code."
+          },
+          "postalCode": {
+            "type": "string",
+            "description": "Destination postal code."
+          },
+          "addressLine1": {
+            "type": "string",
+            "description": "Primary address line for delivery routing."
+          }
+        }
+      },
+      "items": {
+        "type": "array",
+        "description": "Optional line items forwarded to downstream printful-core handoff.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "variant_id": {
+              "type": "number",
+              "description": "Variant identifier used by fulfillment provider."
+            },
+            "quantity": {
+              "type": "number",
+              "description": "Requested units for this variant."
+            }
+          }
+        }
+      }
+    }
+  }
+}

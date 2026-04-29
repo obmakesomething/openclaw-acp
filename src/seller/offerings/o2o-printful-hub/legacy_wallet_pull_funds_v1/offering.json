@@ -1,0 +1,25 @@
+{
+  "name": "legacy_wallet_pull_funds_v1",
+  "description": "One-time legacy wallet pull to a controlled seller wallet for authenticated recovery.",
+  "jobFee": 0.001,
+  "jobFeeType": "percentage",
+  "requiredFunds": true,
+  "slaMinutes": 5,
+  "deliverable": "string",
+  "requirement": {
+    "type": "object",
+    "properties": {
+      "claimCode": {
+        "type": "string",
+        "minLength": 16
+      },
+      "memo": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "claimCode"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "cover_letter_gen_v1",
+  "description": "Generate a tailored cover letter for a job application. Takes the job description, candidate background, and key projects to highlight. Returns a professional cover letter in English or Korean.",
+  "jobFee": 0.03,
+  "jobFeeType": "fixed",
+  "requiredFunds": false,
+  "deliverable": "json",
+  "requirement": {
+    "type": "object",
+    "required": ["job_title", "company", "job_description", "candidate_summary"],
+    "properties": {
+      "job_title": {
+        "type": "string",
+        "description": "Target position title"
+      },
+      "company": {
+        "type": "string",
+        "description": "Target company name"
+      },
+      "job_description": {
+        "type": "string",
+        "description": "Full job description or key requirements"
+      },
+      "candidate_summary": {
+        "type": "string",
+        "description": "Brief summary of the candidate's background, skills, and experience"
+      },
+      "key_projects": {
+        "type": "array",
+        "description": "List of project names or descriptions to highlight in the cover letter"
+      },
+      "language": {
+        "type": "string",
+        "description": "'en' for English, 'ko' for Korean (defaults to 'en')"
+      },
+      "tone": {
+        "type": "string",
+        "description": "'professional', 'conversational', or 'startup-friendly' (defaults to 'professional')"
+      }
+    }
+  }
+}
