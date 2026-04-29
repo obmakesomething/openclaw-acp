@@ -1,0 +1,1261 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "wt-feat-ux-review-demand-signal",
+    "languages": [
+      "typescript",
+      "markdown",
+      "json",
+      "text",
+      "shell",
+      "javascript"
+    ],
+    "frameworks": [],
+    "description": "ACP \u2014 Agent Commerce Protocol CLI",
+    "analyzedAt": "2026-04-29T04:02:57Z",
+    "gitCommitHash": "6927ff230deb3252af12f48f6d0e0261017ee44e"
+  },
+  "nodes": [
+    {
+      "id": "file:.env.example",
+      "type": "file",
+      "name": ".env.example",
+      "filePath": ".env.example",
+      "summary": "Text file at .env.example",
+      "tags": [
+        "text"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.gitignore",
+      "type": "file",
+      "name": ".gitignore",
+      "filePath": ".gitignore",
+      "summary": "Text file at .gitignore",
+      "tags": [
+        "text"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.husky/pre-commit",
+      "type": "file",
+      "name": "pre-commit",
+      "filePath": ".husky/pre-commit",
+      "summary": "Text file at .husky/pre-commit",
+      "tags": [
+        "text",
+        ".husky"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.prettierignore",
+      "type": "file",
+      "name": ".prettierignore",
+      "filePath": ".prettierignore",
+      "summary": "Text file at .prettierignore",
+      "tags": [
+        "text"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.prettierrc",
+      "type": "file",
+      "name": ".prettierrc",
+      "filePath": ".prettierrc",
+      "summary": "Text file at .prettierrc",
+      "tags": [
+        "text"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:README.md",
+      "type": "file",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Markdown file at README.md with 279 lines",
+      "tags": [
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:SKILL.md",
+      "type": "file",
+      "name": "SKILL.md",
+      "filePath": "SKILL.md",
+      "summary": "Markdown file at SKILL.md with 274 lines",
+      "tags": [
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:bin/acp.ts",
+      "type": "file",
+      "name": "acp.ts",
+      "filePath": "bin/acp.ts",
+      "summary": "Typescript file at bin/acp.ts with 858 lines",
+      "tags": [
+        "typescript",
+        "bin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:data/rapid_recovery_telegram_targets.json",
+      "type": "file",
+      "name": "rapid_recovery_telegram_targets.json",
+      "filePath": "data/rapid_recovery_telegram_targets.json",
+      "summary": "Json file at data/rapid_recovery_telegram_targets.json with 2 lines",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docs/plans/2026-03-30-ux-review-demand-signal-design.md",
+      "type": "file",
+      "name": "2026-03-30-ux-review-demand-signal-design.md",
+      "filePath": "docs/plans/2026-03-30-ux-review-demand-signal-design.md",
+      "summary": "Markdown file at docs/plans/2026-03-30-ux-review-demand-signal-design.md with 43 lines",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docs/plans/2026-03-30-ux-review-demand-signal.md",
+      "type": "file",
+      "name": "2026-03-30-ux-review-demand-signal.md",
+      "filePath": "docs/plans/2026-03-30-ux-review-demand-signal.md",
+      "summary": "Markdown file at docs/plans/2026-03-30-ux-review-demand-signal.md with 86 lines",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docs/rapid-recovery-router-7day-sprint.md",
+      "type": "file",
+      "name": "rapid-recovery-router-7day-sprint.md",
+      "filePath": "docs/rapid-recovery-router-7day-sprint.md",
+      "summary": "Markdown file at docs/rapid-recovery-router-7day-sprint.md with 127 lines",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docs/ux-review-intake-template.md",
+      "type": "file",
+      "name": "ux-review-intake-template.md",
+      "filePath": "docs/ux-review-intake-template.md",
+      "summary": "Markdown file at docs/ux-review-intake-template.md with 63 lines",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docs/ux-review-proof-pack.md",
+      "type": "file",
+      "name": "ux-review-proof-pack.md",
+      "filePath": "docs/ux-review-proof-pack.md",
+      "summary": "Markdown file at docs/ux-review-proof-pack.md with 84 lines",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docs/ux-review-sample-output.md",
+      "type": "file",
+      "name": "ux-review-sample-output.md",
+      "filePath": "docs/ux-review-sample-output.md",
+      "summary": "Markdown file at docs/ux-review-sample-output.md with 103 lines",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:package-lock.json",
+      "type": "file",
+      "name": "package-lock.json",
+      "filePath": "package-lock.json",
+      "summary": "Json file at package-lock.json with 1763 lines",
+      "tags": [
+        "json"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:package.json",
+      "type": "file",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "Json file at package.json with 51 lines",
+      "tags": [
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:references/acp-job.md",
+      "type": "file",
+      "name": "acp-job.md",
+      "filePath": "references/acp-job.md",
+      "summary": "Markdown file at references/acp-job.md with 377 lines",
+      "tags": [
+        "markdown",
+        "references"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:references/agent-token.md",
+      "type": "file",
+      "name": "agent-token.md",
+      "filePath": "references/agent-token.md",
+      "summary": "Markdown file at references/agent-token.md with 143 lines",
+      "tags": [
+        "markdown",
+        "references"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:references/agent-wallet.md",
+      "type": "file",
+      "name": "agent-wallet.md",
+      "filePath": "references/agent-wallet.md",
+      "summary": "Markdown file at references/agent-wallet.md with 148 lines",
+      "tags": [
+        "markdown",
+        "references"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:references/bounty.md",
+      "type": "file",
+      "name": "bounty.md",
+      "filePath": "references/bounty.md",
+      "summary": "Markdown file at references/bounty.md with 511 lines",
+      "tags": [
+        "markdown",
+        "references"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:references/deploy.md",
+      "type": "file",
+      "name": "deploy.md",
+      "filePath": "references/deploy.md",
+      "summary": "Markdown file at references/deploy.md with 237 lines",
+      "tags": [
+        "markdown",
+        "references"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:references/seller.md",
+      "type": "file",
+      "name": "seller.md",
+      "filePath": "references/seller.md",
+      "summary": "Markdown file at references/seller.md with 564 lines",
+      "tags": [
+        "markdown",
+        "references"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/ensure_seller_running.sh",
+      "type": "file",
+      "name": "ensure_seller_running.sh",
+      "filePath": "scripts/ensure_seller_running.sh",
+      "summary": "Shell file at scripts/ensure_seller_running.sh with 22 lines",
+      "tags": [
+        "shell",
+        "scripts"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/openrouter_free_daily_check.mjs",
+      "type": "file",
+      "name": "openrouter_free_daily_check.mjs",
+      "filePath": "scripts/openrouter_free_daily_check.mjs",
+      "summary": "Javascript file at scripts/openrouter_free_daily_check.mjs with 291 lines",
+      "tags": [
+        "javascript",
+        "scripts"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/rapid_recovery_daily_ops.ts",
+      "type": "file",
+      "name": "rapid_recovery_daily_ops.ts",
+      "filePath": "scripts/rapid_recovery_daily_ops.ts",
+      "summary": "Typescript file at scripts/rapid_recovery_daily_ops.ts with 150 lines",
+      "tags": [
+        "typescript",
+        "scripts"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/rapid_recovery_kpi_report.ts",
+      "type": "file",
+      "name": "rapid_recovery_kpi_report.ts",
+      "filePath": "scripts/rapid_recovery_kpi_report.ts",
+      "summary": "Typescript file at scripts/rapid_recovery_kpi_report.ts with 426 lines",
+      "tags": [
+        "typescript",
+        "scripts"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/rapid_recovery_lead_bounty_loop.ts",
+      "type": "file",
+      "name": "rapid_recovery_lead_bounty_loop.ts",
+      "filePath": "scripts/rapid_recovery_lead_bounty_loop.ts",
+      "summary": "Typescript file at scripts/rapid_recovery_lead_bounty_loop.ts with 512 lines",
+      "tags": [
+        "typescript",
+        "scripts"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/rapid_recovery_profile_daily_update.ts",
+      "type": "file",
+      "name": "rapid_recovery_profile_daily_update.ts",
+      "filePath": "scripts/rapid_recovery_profile_daily_update.ts",
+      "summary": "Typescript file at scripts/rapid_recovery_profile_daily_update.ts with 151 lines",
+      "tags": [
+        "typescript",
+        "scripts"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/rapid_recovery_telegram_outbound.ts",
+      "type": "file",
+      "name": "rapid_recovery_telegram_outbound.ts",
+      "filePath": "scripts/rapid_recovery_telegram_outbound.ts",
+      "summary": "Typescript file at scripts/rapid_recovery_telegram_outbound.ts with 368 lines",
+      "tags": [
+        "typescript",
+        "scripts"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/commands/agent.ts",
+      "type": "file",
+      "name": "agent.ts",
+      "filePath": "src/commands/agent.ts",
+      "summary": "Typescript file at src/commands/agent.ts with 308 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/commands/bounty.ts",
+      "type": "file",
+      "name": "bounty.ts",
+      "filePath": "src/commands/bounty.ts",
+      "summary": "Typescript file at src/commands/bounty.ts with 1123 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/commands/deploy.ts",
+      "type": "file",
+      "name": "deploy.ts",
+      "filePath": "src/commands/deploy.ts",
+      "summary": "Typescript file at src/commands/deploy.ts with 381 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/commands/job.ts",
+      "type": "file",
+      "name": "job.ts",
+      "filePath": "src/commands/job.ts",
+      "summary": "Typescript file at src/commands/job.ts with 194 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/commands/profile.ts",
+      "type": "file",
+      "name": "profile.ts",
+      "filePath": "src/commands/profile.ts",
+      "summary": "Typescript file at src/commands/profile.ts with 66 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/commands/resource.ts",
+      "type": "file",
+      "name": "resource.ts",
+      "filePath": "src/commands/resource.ts",
+      "summary": "Typescript file at src/commands/resource.ts with 87 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/commands/search.ts",
+      "type": "file",
+      "name": "search.ts",
+      "filePath": "src/commands/search.ts",
+      "summary": "Typescript file at src/commands/search.ts with 299 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/commands/sell.ts",
+      "type": "file",
+      "name": "sell.ts",
+      "filePath": "src/commands/sell.ts",
+      "summary": "Typescript file at src/commands/sell.ts with 820 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/commands/serve.ts",
+      "type": "file",
+      "name": "serve.ts",
+      "filePath": "src/commands/serve.ts",
+      "summary": "Typescript file at src/commands/serve.ts with 236 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/commands/setup.ts",
+      "type": "file",
+      "name": "setup.ts",
+      "filePath": "src/commands/setup.ts",
+      "summary": "Typescript file at src/commands/setup.ts with 353 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/commands/token.ts",
+      "type": "file",
+      "name": "token.ts",
+      "filePath": "src/commands/token.ts",
+      "summary": "Typescript file at src/commands/token.ts with 73 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/commands/twitter.ts",
+      "type": "file",
+      "name": "twitter.ts",
+      "filePath": "src/commands/twitter.ts",
+      "summary": "Typescript file at src/commands/twitter.ts with 224 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/commands/wallet.ts",
+      "type": "file",
+      "name": "wallet.ts",
+      "filePath": "src/commands/wallet.ts",
+      "summary": "Typescript file at src/commands/wallet.ts with 105 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/deploy/docker.ts",
+      "type": "file",
+      "name": "docker.ts",
+      "filePath": "src/deploy/docker.ts",
+      "summary": "Typescript file at src/deploy/docker.ts with 45 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/deploy/railway.ts",
+      "type": "file",
+      "name": "railway.ts",
+      "filePath": "src/deploy/railway.ts",
+      "summary": "Typescript file at src/deploy/railway.ts with 260 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "src/lib/api.ts",
+      "summary": "Typescript file at src/lib/api.ts with 111 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/auth.ts",
+      "type": "file",
+      "name": "auth.ts",
+      "filePath": "src/lib/auth.ts",
+      "summary": "Typescript file at src/lib/auth.ts with 280 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/bounty.ts",
+      "type": "file",
+      "name": "bounty.ts",
+      "filePath": "src/lib/bounty.ts",
+      "summary": "Typescript file at src/lib/bounty.ts with 236 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/client.ts",
+      "type": "file",
+      "name": "client.ts",
+      "filePath": "src/lib/client.ts",
+      "summary": "Typescript file at src/lib/client.ts with 32 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/config.ts",
+      "type": "file",
+      "name": "config.ts",
+      "filePath": "src/lib/config.ts",
+      "summary": "Typescript file at src/lib/config.ts with 225 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/open.ts",
+      "type": "file",
+      "name": "open.ts",
+      "filePath": "src/lib/open.ts",
+      "summary": "Typescript file at src/lib/open.ts with 26 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/openclawCron.ts",
+      "type": "file",
+      "name": "openclawCron.ts",
+      "filePath": "src/lib/openclawCron.ts",
+      "summary": "Typescript file at src/lib/openclawCron.ts with 132 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/output.ts",
+      "type": "file",
+      "name": "output.ts",
+      "filePath": "src/lib/output.ts",
+      "summary": "Typescript file at src/lib/output.ts with 99 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/twitterApi.ts",
+      "type": "file",
+      "name": "twitterApi.ts",
+      "filePath": "src/lib/twitterApi.ts",
+      "summary": "Typescript file at src/lib/twitterApi.ts with 168 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/twitterOutreach.ts",
+      "type": "file",
+      "name": "twitterOutreach.ts",
+      "filePath": "src/lib/twitterOutreach.ts",
+      "summary": "Typescript file at src/lib/twitterOutreach.ts with 306 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/wallet.ts",
+      "type": "file",
+      "name": "wallet.ts",
+      "filePath": "src/lib/wallet.ts",
+      "summary": "Typescript file at src/lib/wallet.ts with 82 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/handlers.ts",
+      "type": "file",
+      "name": "handlers.ts",
+      "filePath": "src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/handlers.ts",
+      "summary": "Typescript file at src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/handlers.ts with 47 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/offering.json",
+      "type": "file",
+      "name": "offering.json",
+      "filePath": "src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/offering.json",
+      "summary": "Json file at src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/offering.json with 35 lines",
+      "tags": [
+        "json",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/handlers.ts",
+      "type": "file",
+      "name": "handlers.ts",
+      "filePath": "src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/handlers.ts",
+      "summary": "Typescript file at src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/handlers.ts with 35 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/offering.json",
+      "type": "file",
+      "name": "offering.json",
+      "filePath": "src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/offering.json",
+      "summary": "Json file at src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/offering.json with 35 lines",
+      "tags": [
+        "json",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/handlers.ts",
+      "type": "file",
+      "name": "handlers.ts",
+      "filePath": "src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/handlers.ts",
+      "summary": "Typescript file at src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/handlers.ts with 34 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/offering.json",
+      "type": "file",
+      "name": "offering.json",
+      "filePath": "src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/offering.json",
+      "summary": "Json file at src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/offering.json with 35 lines",
+      "tags": [
+        "json",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/handlers.ts",
+      "type": "file",
+      "name": "handlers.ts",
+      "filePath": "src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/handlers.ts",
+      "summary": "Typescript file at src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/handlers.ts with 31 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/offering.json",
+      "type": "file",
+      "name": "offering.json",
+      "filePath": "src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/offering.json",
+      "summary": "Json file at src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/offering.json with 59 lines",
+      "tags": [
+        "json",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/handlers.ts",
+      "type": "file",
+      "name": "handlers.ts",
+      "filePath": "src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/handlers.ts",
+      "summary": "Typescript file at src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/handlers.ts with 31 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/offering.json",
+      "type": "file",
+      "name": "offering.json",
+      "filePath": "src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/offering.json",
+      "summary": "Json file at src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/offering.json with 85 lines",
+      "tags": [
+        "json",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/ux-review-orchestrator/twitter_outreach_v1/handlers.ts",
+      "type": "file",
+      "name": "handlers.ts",
+      "filePath": "src/seller/offerings/ux-review-orchestrator/twitter_outreach_v1/handlers.ts",
+      "summary": "Typescript file at src/seller/offerings/ux-review-orchestrator/twitter_outreach_v1/handlers.ts with 67 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/offerings/ux-review-orchestrator/twitter_outreach_v1/offering.json",
+      "type": "file",
+      "name": "offering.json",
+      "filePath": "src/seller/offerings/ux-review-orchestrator/twitter_outreach_v1/offering.json",
+      "summary": "Json file at src/seller/offerings/ux-review-orchestrator/twitter_outreach_v1/offering.json with 50 lines",
+      "tags": [
+        "json",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/resources/ux_review_intake_template/resources.json",
+      "type": "file",
+      "name": "resources.json",
+      "filePath": "src/seller/resources/ux_review_intake_template/resources.json",
+      "summary": "Json file at src/seller/resources/ux_review_intake_template/resources.json with 6 lines",
+      "tags": [
+        "json",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/resources/ux_review_proof_pack/resources.json",
+      "type": "file",
+      "name": "resources.json",
+      "filePath": "src/seller/resources/ux_review_proof_pack/resources.json",
+      "summary": "Json file at src/seller/resources/ux_review_proof_pack/resources.json with 6 lines",
+      "tags": [
+        "json",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/resources/ux_review_sample_output/resources.json",
+      "type": "file",
+      "name": "resources.json",
+      "filePath": "src/seller/resources/ux_review_sample_output/resources.json",
+      "summary": "Json file at src/seller/resources/ux_review_sample_output/resources.json with 6 lines",
+      "tags": [
+        "json",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/acpSocket.ts",
+      "type": "file",
+      "name": "acpSocket.ts",
+      "filePath": "src/seller/runtime/acpSocket.ts",
+      "summary": "Typescript file at src/seller/runtime/acpSocket.ts with 77 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/offeringTypes.ts",
+      "type": "file",
+      "name": "offeringTypes.ts",
+      "filePath": "src/seller/runtime/offeringTypes.ts",
+      "summary": "Typescript file at src/seller/runtime/offeringTypes.ts with 53 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/offerings.ts",
+      "type": "file",
+      "name": "offerings.ts",
+      "filePath": "src/seller/runtime/offerings.ts",
+      "summary": "Typescript file at src/seller/runtime/offerings.ts with 76 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/openrouterRecovery.ts",
+      "type": "file",
+      "name": "openrouterRecovery.ts",
+      "filePath": "src/seller/runtime/openrouterRecovery.ts",
+      "summary": "Typescript file at src/seller/runtime/openrouterRecovery.ts with 279 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/recoveryRouterOfferings.ts",
+      "type": "file",
+      "name": "recoveryRouterOfferings.ts",
+      "filePath": "src/seller/runtime/recoveryRouterOfferings.ts",
+      "summary": "Typescript file at src/seller/runtime/recoveryRouterOfferings.ts with 183 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/revenueSprintGuards.ts",
+      "type": "file",
+      "name": "revenueSprintGuards.ts",
+      "filePath": "src/seller/runtime/revenueSprintGuards.ts",
+      "summary": "Typescript file at src/seller/runtime/revenueSprintGuards.ts with 225 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/seller.ts",
+      "type": "file",
+      "name": "seller.ts",
+      "filePath": "src/seller/runtime/seller.ts",
+      "summary": "Typescript file at src/seller/runtime/seller.ts with 256 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/sellerApi.ts",
+      "type": "file",
+      "name": "sellerApi.ts",
+      "filePath": "src/seller/runtime/sellerApi.ts",
+      "summary": "Typescript file at src/seller/runtime/sellerApi.ts with 76 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "src/seller/runtime/types.ts",
+      "summary": "Typescript file at src/seller/runtime/types.ts with 63 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/seller/runtime/uxReviewOrchestrator.ts",
+      "type": "file",
+      "name": "uxReviewOrchestrator.ts",
+      "filePath": "src/seller/runtime/uxReviewOrchestrator.ts",
+      "summary": "Typescript file at src/seller/runtime/uxReviewOrchestrator.ts with 795 lines",
+      "tags": [
+        "typescript",
+        "src"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:test-bounty.sh",
+      "type": "file",
+      "name": "test-bounty.sh",
+      "filePath": "test-bounty.sh",
+      "summary": "Shell file at test-bounty.sh with 369 lines",
+      "tags": [
+        "shell"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:test-cli.sh",
+      "type": "file",
+      "name": "test-cli.sh",
+      "filePath": "test-cli.sh",
+      "summary": "Shell file at test-cli.sh with 235 lines",
+      "tags": [
+        "shell"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/bounty_self_match_filter.test.ts",
+      "type": "file",
+      "name": "bounty_self_match_filter.test.ts",
+      "filePath": "tests/bounty_self_match_filter.test.ts",
+      "summary": "Typescript file at tests/bounty_self_match_filter.test.ts with 35 lines",
+      "tags": [
+        "typescript",
+        "tests"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/openrouter_recovery.test.ts",
+      "type": "file",
+      "name": "openrouter_recovery.test.ts",
+      "filePath": "tests/openrouter_recovery.test.ts",
+      "summary": "Typescript file at tests/openrouter_recovery.test.ts with 54 lines",
+      "tags": [
+        "typescript",
+        "tests"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/recovery_offerings_smoke.test.ts",
+      "type": "file",
+      "name": "recovery_offerings_smoke.test.ts",
+      "filePath": "tests/recovery_offerings_smoke.test.ts",
+      "summary": "Typescript file at tests/recovery_offerings_smoke.test.ts with 76 lines",
+      "tags": [
+        "typescript",
+        "tests"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/recovery_router_offerings.test.ts",
+      "type": "file",
+      "name": "recovery_router_offerings.test.ts",
+      "filePath": "tests/recovery_router_offerings.test.ts",
+      "summary": "Typescript file at tests/recovery_router_offerings.test.ts with 78 lines",
+      "tags": [
+        "typescript",
+        "tests"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/revenue_sprint_guards.test.ts",
+      "type": "file",
+      "name": "revenue_sprint_guards.test.ts",
+      "filePath": "tests/revenue_sprint_guards.test.ts",
+      "summary": "Typescript file at tests/revenue_sprint_guards.test.ts with 104 lines",
+      "tags": [
+        "typescript",
+        "tests"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/ux_review_offerings.test.ts",
+      "type": "file",
+      "name": "ux_review_offerings.test.ts",
+      "filePath": "tests/ux_review_offerings.test.ts",
+      "summary": "Typescript file at tests/ux_review_offerings.test.ts with 63 lines",
+      "tags": [
+        "typescript",
+        "tests"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tsconfig.json",
+      "type": "file",
+      "name": "tsconfig.json",
+      "filePath": "tsconfig.json",
+      "summary": "Json file at tsconfig.json with 21 lines",
+      "tags": [
+        "json"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:bin/acp.ts",
+      "target": "file:package.json",
+      "type": "imports",
+      "weight": 1,
+      "direction": "outbound"
+    },
+    {
+      "source": "file:tests/bounty_self_match_filter.test.ts",
+      "target": "file:src/commands/bounty.ts",
+      "type": "imports",
+      "weight": 1,
+      "direction": "outbound"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:.husky",
+      "name": ".husky",
+      "description": "Files grouped under .husky",
+      "nodeIds": [
+        "file:.husky/pre-commit"
+      ]
+    },
+    {
+      "id": "layer:bin",
+      "name": "bin",
+      "description": "Files grouped under bin",
+      "nodeIds": [
+        "file:bin/acp.ts"
+      ]
+    },
+    {
+      "id": "layer:data",
+      "name": "data",
+      "description": "Files grouped under data",
+      "nodeIds": [
+        "file:data/rapid_recovery_telegram_targets.json"
+      ]
+    },
+    {
+      "id": "layer:docs",
+      "name": "docs",
+      "description": "Files grouped under docs",
+      "nodeIds": [
+        "file:docs/plans/2026-03-30-ux-review-demand-signal-design.md",
+        "file:docs/plans/2026-03-30-ux-review-demand-signal.md",
+        "file:docs/rapid-recovery-router-7day-sprint.md",
+        "file:docs/ux-review-intake-template.md",
+        "file:docs/ux-review-proof-pack.md",
+        "file:docs/ux-review-sample-output.md"
+      ]
+    },
+    {
+      "id": "layer:references",
+      "name": "references",
+      "description": "Files grouped under references",
+      "nodeIds": [
+        "file:references/acp-job.md",
+        "file:references/agent-token.md",
+        "file:references/agent-wallet.md",
+        "file:references/bounty.md",
+        "file:references/deploy.md",
+        "file:references/seller.md"
+      ]
+    },
+    {
+      "id": "layer:root",
+      "name": "root",
+      "description": "Files grouped under root",
+      "nodeIds": [
+        "file:.env.example",
+        "file:.gitignore",
+        "file:.prettierignore",
+        "file:.prettierrc",
+        "file:README.md",
+        "file:SKILL.md",
+        "file:package-lock.json",
+        "file:package.json",
+        "file:test-bounty.sh",
+        "file:test-cli.sh",
+        "file:tsconfig.json"
+      ]
+    },
+    {
+      "id": "layer:scripts",
+      "name": "scripts",
+      "description": "Files grouped under scripts",
+      "nodeIds": [
+        "file:scripts/ensure_seller_running.sh",
+        "file:scripts/openrouter_free_daily_check.mjs",
+        "file:scripts/rapid_recovery_daily_ops.ts",
+        "file:scripts/rapid_recovery_kpi_report.ts",
+        "file:scripts/rapid_recovery_lead_bounty_loop.ts",
+        "file:scripts/rapid_recovery_profile_daily_update.ts",
+        "file:scripts/rapid_recovery_telegram_outbound.ts"
+      ]
+    },
+    {
+      "id": "layer:src",
+      "name": "src",
+      "description": "Files grouped under src",
+      "nodeIds": [
+        "file:src/commands/agent.ts",
+        "file:src/commands/bounty.ts",
+        "file:src/commands/deploy.ts",
+        "file:src/commands/job.ts",
+        "file:src/commands/profile.ts",
+        "file:src/commands/resource.ts",
+        "file:src/commands/search.ts",
+        "file:src/commands/sell.ts",
+        "file:src/commands/serve.ts",
+        "file:src/commands/setup.ts",
+        "file:src/commands/token.ts",
+        "file:src/commands/twitter.ts",
+        "file:src/commands/wallet.ts",
+        "file:src/deploy/docker.ts",
+        "file:src/deploy/railway.ts",
+        "file:src/lib/api.ts",
+        "file:src/lib/auth.ts",
+        "file:src/lib/bounty.ts",
+        "file:src/lib/client.ts",
+        "file:src/lib/config.ts",
+        "file:src/lib/open.ts",
+        "file:src/lib/openclawCron.ts",
+        "file:src/lib/output.ts",
+        "file:src/lib/twitterApi.ts",
+        "file:src/lib/twitterOutreach.ts",
+        "file:src/lib/wallet.ts",
+        "file:src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/handlers.ts",
+        "file:src/seller/offerings/rapid-recovery-router/ops_recovery_guardrail_v1/offering.json",
+        "file:src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/handlers.ts",
+        "file:src/seller/offerings/rapid-recovery-router/ops_recovery_hotfix_openrouter_v1/offering.json",
+        "file:src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/handlers.ts",
+        "file:src/seller/offerings/rapid-recovery-router/ops_recovery_turbo_v1/offering.json",
+        "file:src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/handlers.ts",
+        "file:src/seller/offerings/ux-review-orchestrator/product_ux_gate_lite_v1/offering.json",
+        "file:src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/handlers.ts",
+        "file:src/seller/offerings/ux-review-orchestrator/product_ux_review_deep_v1/offering.json",
+        "file:src/seller/offerings/ux-review-orchestrator/twitter_outreach_v1/handlers.ts",
+        "file:src/seller/offerings/ux-review-orchestrator/twitter_outreach_v1/offering.json",
+        "file:src/seller/resources/ux_review_intake_template/resources.json",
+        "file:src/seller/resources/ux_review_proof_pack/resources.json",
+        "file:src/seller/resources/ux_review_sample_output/resources.json",
+        "file:src/seller/runtime/acpSocket.ts",
+        "file:src/seller/runtime/offeringTypes.ts",
+        "file:src/seller/runtime/offerings.ts",
+        "file:src/seller/runtime/openrouterRecovery.ts",
+        "file:src/seller/runtime/recoveryRouterOfferings.ts",
+        "file:src/seller/runtime/revenueSprintGuards.ts",
+        "file:src/seller/runtime/seller.ts",
+        "file:src/seller/runtime/sellerApi.ts",
+        "file:src/seller/runtime/types.ts",
+        "file:src/seller/runtime/uxReviewOrchestrator.ts"
+      ]
+    },
+    {
+      "id": "layer:tests",
+      "name": "tests",
+      "description": "Files grouped under tests",
+      "nodeIds": [
+        "file:tests/bounty_self_match_filter.test.ts",
+        "file:tests/openrouter_recovery.test.ts",
+        "file:tests/recovery_offerings_smoke.test.ts",
+        "file:tests/recovery_router_offerings.test.ts",
+        "file:tests/revenue_sprint_guards.test.ts",
+        "file:tests/ux_review_offerings.test.ts"
+      ]
+    }
+  ],
+  "tour": []
+}
